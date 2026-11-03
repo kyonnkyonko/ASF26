@@ -1,0 +1,522 @@
+<meta name="robots" content="noindex, nofollow">
+<title>ASF26 曼谷行前須知</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 左側固定目錄＋右側主欄；上半「整理」，下半「完整原始對話」，兩邊用錨點互相連結 */
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --ink: #1b2433;
+  --muted: #5d6879;
+  --line: #dfe4ea;
+  --accent: #0e6a5b;
+  --accent-soft: #e2f1ed;
+  --lu: #b36d0b;
+  --lu-soft: #fbf0dc;
+  --hl: #fff2b8;
+  --f-display: "LXGW WenKai TC", "Kaiti TC", "Noto Serif TC", serif;
+  --f-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161d; --surface: #1a2029; --ink: #e6eaf0; --muted: #9aa5b5; --line: #2c3442;
+    --accent: #4fc2ab; --accent-soft: #173a35; --lu: #f0b158; --lu-soft: #3a2c14; --hl: #4a4114;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161d; --surface: #1a2029; --ink: #e6eaf0; --muted: #9aa5b5; --line: #2c3442;
+  --accent: #4fc2ab; --accent-soft: #173a35; --lu: #f0b158; --lu-soft: #3a2c14; --hl: #4a4114;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.75;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, label:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+code { font-family: var(--f-mono); background: var(--accent-soft); padding: 0 .3em; border-radius: 3px; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 40px 80px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; }
+@media (max-width: 860px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 24px 60px; } }
+
+header.top { grid-column: 1 / -1; display: grid; gap: 12px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+h1 { font-family: var(--f-display); font-size: clamp(30px, 5vw, 46px); line-height: 1.2; margin: 0; text-wrap: balance; }
+.lede { margin: 0; max-width: 62ch; color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 4px; font-size: 14px; color: var(--muted); }
+.facts b { color: var(--ink); font-family: var(--f-mono); font-weight: 500; }
+
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; display: grid; gap: 2px; font-size: 14px; }
+nav.toc .h { font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; color: var(--muted); margin-bottom: 6px; }
+nav.toc a { display: flex; justify-content: space-between; gap: 8px; padding: 5px 10px; border-radius: 6px; color: var(--ink); text-decoration: none; }
+nav.toc a:hover { background: var(--accent-soft); }
+nav.toc a span { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+nav.toc a.log { margin-top: 10px; border-top: 1px solid var(--line); border-radius: 0; padding-top: 12px; color: var(--accent); font-weight: 500; }
+@media (max-width: 860px) {
+  nav.toc { position: static; display: flex; flex-wrap: wrap; gap: 6px; }
+  nav.toc .h { width: 100%; }
+  nav.toc a { border: 1px solid var(--line); background: var(--surface); padding: 3px 10px; }
+  nav.toc a.log { margin: 0; border-top: 1px solid var(--line); border-radius: 6px; padding-top: 3px; }
+}
+
+main { min-width: 0; display: grid; gap: 48px; }
+h2 { font-family: var(--f-display); font-size: 28px; margin: 0 0 4px; }
+.sub { margin: 0 0 20px; color: var(--muted); font-size: 14px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: var(--muted); align-items: center; }
+
+.topic { scroll-margin-top: 16px; }
+.topic h3 { font-family: var(--f-display); font-size: 21px; margin: 0 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--ink); }
+.topic ul { list-style: none; margin: 0 0 8px; padding: 0; display: grid; }
+.pt { padding: 14px 0; border-bottom: 1px solid var(--line); display: grid; gap: 8px; }
+.pt p { margin: 0; max-width: 68ch; }
+.pt.from-lu p b { color: var(--lu); }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; line-height: 1; padding: 4px 6px 3px; margin-right: 8px; border-radius: 4px; background: var(--lu-soft); color: var(--lu); vertical-align: 2px; letter-spacing: .05em; }
+
+.refs { display: flex; flex-wrap: wrap; gap: 6px; }
+.ref { display: inline-flex; gap: 6px; align-items: baseline; font-size: 12px; text-decoration: none; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); }
+.ref:hover { border-color: var(--accent); color: var(--accent); }
+.ref-when { font-family: var(--f-mono); }
+.ref-who { color: var(--ink); }
+.ref.lu { border-color: color-mix(in srgb, var(--lu) 40%, transparent); }
+.ref.lu .ref-who { color: var(--lu); font-weight: 500; }
+
+.note { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 18px; font-size: 14px; color: var(--muted); }
+.note ul { margin: 6px 0 0; padding-left: 1.2em; }
+
+#log { scroll-margin-top: 16px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 16px; font-size: 14px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); padding-block: 10px; z-index: 5; border-bottom: 1px solid var(--line); }
+.controls label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.controls input { accent-color: var(--accent); width: 16px; height: 16px; }
+.day { display: grid; gap: 2px; margin-bottom: 18px; }
+.daylabel { font-family: var(--f-mono); font-weight: 500; font-size: 13px; color: var(--muted); margin: 8px 0 6px; letter-spacing: .05em; }
+.msg { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 14px; padding: 8px 10px; border-radius: 6px; scroll-margin-top: 80px; transition: background .4s; }
+.msg .meta { display: flex; gap: 8px; align-items: baseline; font-size: 13px; }
+.msg .t { font-family: var(--f-mono); color: var(--muted); font-size: 12px; }
+.msg .who { font-weight: 500; overflow-wrap: anywhere; }
+.msg .body { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; grid-column: 2; }
+.msg .mediatag { grid-column: 2; font-size: 13px; color: var(--muted); font-style: italic; }
+.msg .back { grid-column: 2; display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12px; }
+.msg .back a { text-decoration: none; }
+.msg.lu { background: var(--lu-soft); }
+.msg.lu .who { color: var(--lu); }
+.msg.sys { grid-template-columns: 150px minmax(0, 1fr); font-size: 12px; color: var(--muted); padding-block: 2px; }
+.msg.sys .sysbody { overflow-wrap: anywhere; }
+.msg:target, .msg.flash { background: var(--hl); outline: 2px solid var(--lu); }
+@media (max-width: 600px) {
+  .msg, .msg.sys { grid-template-columns: minmax(0, 1fr); }
+  .msg .body, .msg .mediatag, .msg .back { grid-column: 1; }
+}
+#log.hide-sys .msg.sys { display: none; }
+#log.hide-media .msg.media { display: none; }
+#log.only-lu .msg:not(.lu) { display: none; }
+#log.only-cited .msg:not(.cited) { display: none; }
+.totop { font-size: 13px; }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">LINE · ASF26 聯絡群組 · 2026/10/6 – 11/3</div>
+    <h1>ASF26 曼谷行前須知</h1>
+    <p class="lede">從「ASF26 聯絡群組」整理出去泰國參加大會要注意的事。每一點後面的小標籤都能點，會跳到下方完整原始對話的那一則；原始對話也有連結可以跳回整理。</p>
+    <div class="facts">
+      <span>整理重點 <b>60</b> 點</span>
+      <span>原始訊息 <b>196</b> 則</span>
+      <span>其中呂紹鳴 <b>99</b> 則</span>
+      <span>匯出時間 <b>2026/11/3</b></span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="目錄">
+    <div class="h">目錄</div>
+    <a href="#s-passport">證件與入境<span>6</span></a><a href="#s-check">大會通知信與資料核對<span>5</span></a><a href="#s-whatsapp">WhatsApp 官方公告群組<span>7</span></a><a href="#s-airport">機場出發流程<span>4</span></a><a href="#s-money">換錢、押金與報帳<span>5</span></a><a href="#s-net">上網：漫遊、eSIM、實體 SIM 卡<span>13</span></a><a href="#s-gear">電器與手機帳號<span>2</span></a><a href="#s-transit">曼谷交通<span>3</span></a><a href="#s-checkin">飯店入住與大會報到<span>6</span></a><a href="#s-session">大會期間：翻譯與研討會<span>2</span></a><a href="#s-kids">兒童<span>2</span></a><a href="#s-safety">禮儀與安全<span>2</span></a><a href="#s-prayer">禱告與籌款<span>3</span></a>
+    <a class="log" href="#log">完整原始對話</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>重點整理</h2>
+      <p class="sub">依主題分類。同一件事在群組裡講過好幾次的，合併成一點並附上每一次的原文。</p>
+      <div class="legend">
+        <span><span class="badge">紹鳴</span>這一點來自呂紹鳴的發言</span>
+        <span><a class="ref lu" href="#log"><span class="ref-when">日期 時間</span><span class="ref-who">發言人</span></a> 點了跳到原文</span>
+      </div>
+      <section class="topic" id="s-passport"><h3>證件與入境</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>護照效期要在 <b>2027/5/6 之後</b>。台灣、馬、港、澳、美、韓目前免簽；如果曾被拒絕入境，請先了解原因。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>抵達前 72 小時內</b>填泰國數位入境卡，二選一：TDAC 網站或官方 THIM App。完成線上填寫和健康申報後，<b>存好自己的 QR code</b>（每人一個）。</p><div class="refs"><a class="ref lu" href="#m500" data-target="m500"><span class="ref-when">10/28 15:47</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>入境申請是免費的</b>。任何要收費的代辦網站都不要點。</p><div class="refs"><a class="ref lu" href="#m583" data-target="m583"><span class="ref-when">11/2 23:45</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>THIM App 現在就能先建立資料，但健康申報要等到抵達前 72 小時才能做。網友說用 THIM 通關比較快，附網路教學。</p><div class="refs"><a class="ref lu" href="#m680" data-target="m680"><span class="ref-when">11/3 15:20</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>可以把大會寄來、有飯店資料的通知信印出來，當作給海關看的參考文件。</p><div class="refs"><a class="ref lu" href="#m79" data-target="m79"><span class="ref-when">10/16 11:27</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>建議列印紙本：護照影本、飯店資料、大會時間表、回程班機資料、入境卡 QR code。</p><div class="refs"><a class="ref lu" href="#m500" data-target="m500"><span class="ref-when">10/28 15:47</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-check"><h3>大會通知信與資料核對</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>大會只寄信到報名時填的 email，請<b>轉寄給同行的配偶、家屬和成年家人</b>。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m79" data-target="m79"><span class="ref-when">10/16 11:27</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>核對個人資料：手機號碼（要是註冊 WhatsApp 用的號碼）、航班、入住和退房日期。要更正就回覆大會的通知信，寄給大會的聯絡窗口（信上有信箱）。</p><div class="refs"><a class="ref lu" href="#m79" data-target="m79"><span class="ref-when">10/16 11:27</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>班機有變更，請通知紹鳴和信宏哥。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>大會信上的班機時間是「抵達曼谷」和「離開曼谷」的時間</b>，不是桃園起飛時間。請對照電子機票再確認一次，已經有同工看錯，也有人的離開時間明顯填錯。</p><div class="refs"><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt"><p>通知信裡有你住的飯店名稱、地址和 Google 地圖連結，請不要跑錯飯店。</p><div class="refs"><a class="ref" href="#m102" data-target="m102"><span class="ref-when">10/16 12:38</span><span class="ref-who">陳信宏</span></a><a class="ref" href="#m103" data-target="m103"><span class="ref-when">10/16 12:40</span><span class="ref-who">陳信宏</span></a><a class="ref" href="#m104" data-target="m104"><span class="ref-when">10/16 12:41</span><span class="ref-who">陳信宏</span></a></div></li></ul></section><section class="topic" id="s-whatsapp"><h3>WhatsApp 官方公告群組</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>大會現場的通訊用 WhatsApp。官方群組是單向頻道，用來發現場公告、時程變更、場地資訊和重要提醒。需要安全通訊請找信宏哥或回覆大會信件。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m311" data-target="m311"><span class="ref-when">10/22 18:12</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>沒用過 WhatsApp 的同工，要用報名填的手機號碼下載並註冊（附新手教學）。</p><div class="refs"><a class="ref lu" href="#m79" data-target="m79"><span class="ref-when">10/16 11:27</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>紹鳴已經一筆一筆把大家加進官方社群，加不到通常是號碼不對或還沒註冊 WhatsApp。之後才註冊的同工，要再聯絡紹鳴加入。</p><div class="refs"><a class="ref lu" href="#m346" data-target="m346"><span class="ref-when">10/23 14:10</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m407" data-target="m407"><span class="ref-when">10/25 11:49</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m572" data-target="m572"><span class="ref-when">11/1 13:52</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>WhatsApp 邀請如果沒有及時接受會失效，需要重發請找紹鳴。</p><div class="refs"><a class="ref lu" href="#m477" data-target="m477"><span class="ref-when">10/26 17:36</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m475" data-target="m475"><span class="ref-when">10/26 16:01</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>短時間加太多人會被 WhatsApp 封鎖，所以只能每天加幾個人；為了群組安全，也不開放用連結自己加入。</p><div class="refs"><a class="ref lu" href="#m380" data-target="m380"><span class="ref-when">10/23 19:48</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m385" data-target="m385"><span class="ref-when">10/23 19:55</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m400" data-target="m400"><span class="ref-when">10/24 11:32</span><span class="ref-who">陳信宏</span></a><a class="ref lu" href="#m402" data-target="m402"><span class="ref-when">10/24 17:28</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m404" data-target="m404"><span class="ref-when">10/24 17:29</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>紹鳴之後會把官方英文公告用 AI 翻成中文，截圖貼到 LINE 群。如果他比較晚貼，歡迎別人幫忙貼，但不要重複。</p><div class="refs"><a class="ref lu" href="#m407" data-target="m407"><span class="ref-when">10/25 11:49</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>後來加入 LINE 群的人看不到前面的訊息，所以紹鳴把重要資料放在<b>公告、記事本和相簿</b>。</p><div class="refs"><a class="ref" href="#m440" data-target="m440"><span class="ref-when">10/25 13:43</span><span class="ref-who">周○○</span></a><a class="ref lu" href="#m443" data-target="m443"><span class="ref-when">10/25 13:46</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m444" data-target="m444"><span class="ref-when">10/25 13:47</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-airport"><h3>機場出發流程</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>起飛前 48 小時</b>到航空公司網站預辦登機。</p><div class="refs"><a class="ref lu" href="#m500" data-target="m500"><span class="ref-when">10/28 15:47</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>國際線建議在起飛前 2～3 小時到機場。流程：看航班看板 → 到報到櫃檯（可用自助機）→ 護照查驗 → 領登機證 → 託運行李 → 領外幣 → 安檢（注意違禁品）→ 通關 → 找登機門。</p><div class="refs"><a class="ref lu" href="#m500" data-target="m500"><span class="ref-when">10/28 15:47</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>就算用自助報到，也要到櫃檯領紙本登機證</b>。去程和回程的登機證都要留著，報帳要用。</p><div class="refs"><a class="ref lu" href="#m500" data-target="m500"><span class="ref-when">10/28 15:47</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>桃園機場有自助託運機，但不是每家航空公司都能用。</p><div class="refs"><a class="ref lu" href="#m500" data-target="m500"><span class="ref-when">10/28 15:47</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-money"><h3>換錢、押金與報帳</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>入住飯店時每間房要付約 4,000 泰銖押金</b>（現金或信用卡預授權，看飯店規定），用來當作雜費和損壞押金。押金是照房間數算：雙人房就是 4,000 元，向先辦入住的人收；家庭住兩間房，每間都要 4,000。</p><div class="refs"><a class="ref lu" href="#m79" data-target="m79"><span class="ref-when">10/16 11:27</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m449" data-target="m449"><span class="ref-when">10/25 13:59</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt"><p>建議出國前在台灣先換好泰銖，也先估好這趟的預算，避免在國外花太多。台灣信用卡在國外刷卡，手續費通常是 1.5%。</p><div class="refs"><a class="ref" href="#m35" data-target="m35"><span class="ref-when">10/6 19:09</span><span class="ref-who">陳信宏</span></a><a class="ref" href="#m36" data-target="m36"><span class="ref-when">10/6 19:14</span><span class="ref-who">陳信宏</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>如果在台銀線上換匯並付款了，記得到台銀櫃檯領外幣。附紹鳴做的線上換匯教學。</p><div class="refs"><a class="ref lu" href="#m500" data-target="m500"><span class="ref-when">10/28 15:47</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>在曼谷叫車要<b>付現金</b>，請準備 <b>100 元面額的泰銖紙鈔</b>。</p><div class="refs"><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>報帳要收好單據：紙本登機證和行程表、兩地交通收據（叫車 App、網路訂的接機車；搭捷運要到人工櫃檯買票再請他們印收據）、餐飲收據、買禮物的收據。</p><div class="refs"><a class="ref lu" href="#m672" data-target="m672"><span class="ref-when">11/3 15:09</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-net"><h3>上網：漫遊、eSIM、實體 SIM 卡</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>紹鳴的整理版（最完整）</b>：在曼谷上網有三種方式。1. 台灣門號開漫遊，最省事但最貴；2. 手機支援 eSIM 就買 eSIM；3. 不支援 eSIM 就買實體 SIM 卡。</p><div class="refs"><a class="ref lu" href="#m234" data-target="m234"><span class="ref-when">10/22 15:36</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>網路要多少才夠</b>：聽大會 Wordly 翻譯 App，建議方案選每天 5～10 GB、速度 10～20 Mbps。只用翻譯 App 每天最少約 2 GB、10 Mbps，LINE 等其他 App 在背景也會用掉流量。</p><div class="refs"><a class="ref lu" href="#m170" data-target="m170"><span class="ref-when">10/22 13:33</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m234" data-target="m234"><span class="ref-when">10/22 15:36</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>1,800 人擠在同一個會場，網速很難保證，要看運氣；不過附近是熱鬧的觀光購物區，訊號應該不會太差。</p><div class="refs"><a class="ref" href="#m196" data-target="m196"><span class="ref-when">10/22 13:38</span><span class="ref-who">林○○</span></a><a class="ref lu" href="#m197" data-target="m197"><span class="ref-when">10/22 13:39</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m198" data-target="m198"><span class="ref-when">10/22 13:39</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m199" data-target="m199"><span class="ref-when">10/22 13:40</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>怎麼查手機能不能用 eSIM</b>：撥號畫面輸入 <code>*#06#</code>，有出現 EID 序號就是支援。一般來說 iPhone XS/11 之後、Pixel 5 之後和少數三星可以用。也可以直接 Google「手機品牌＋型號 能用 eSIM 嗎？能雙卡雙待嗎？」。</p><div class="refs"><a class="ref lu" href="#m298" data-target="m298"><span class="ref-when">10/22 16:07</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m142" data-target="m142"><span class="ref-when">10/22 13:00</span><span class="ref-who">周○○</span></a><a class="ref lu" href="#m146" data-target="m146"><span class="ref-when">10/22 13:04</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m157" data-target="m157"><span class="ref-when">10/22 13:16</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m234" data-target="m234"><span class="ref-when">10/22 15:36</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m301" data-target="m301"><span class="ref-when">10/22 16:27</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>eSIM 一定要在台灣先安裝</b>（在家裡或台灣機場，安裝時要有網路），抵達曼谷再開啟使用。少數業者設定不同，請詳讀購買說明。</p><div class="refs"><a class="ref lu" href="#m290" data-target="m290"><span class="ref-when">10/22 16:00</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m208" data-target="m208"><span class="ref-when">10/22 13:49</span><span class="ref-who">高○○</span></a><a class="ref lu" href="#m209" data-target="m209"><span class="ref-when">10/22 13:52</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m289" data-target="m289"><span class="ref-when">10/22 15:47</span><span class="ref-who">高○○</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>非原生（漫遊型）eSIM</b>：不用實名登記，但有資安風險，最好不要用來處理敏感資料或登入網銀；而且沒有泰國號碼，不能接司機電話或註冊要泰國號碼的 App。這類 eSIM 會標示由 SmarTone 或 CMHK（中國移動香港）提供。</p><div class="refs"><a class="ref lu" href="#m115" data-target="m115"><span class="ref-when">10/22 12:10</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m124" data-target="m124"><span class="ref-when">10/22 12:44</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m226" data-target="m226"><span class="ref-when">10/22 14:50</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m234" data-target="m234"><span class="ref-when">10/22 15:36</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>泰國原生 SIM 卡和原生 eSIM 要實名登記</b>：2025 年起泰國 NBTC 規定，有泰國門號的卡都要綁定身分才能用，請照業者說明操作（有業者客服說他們的方案不用實名）。</p><div class="refs"><a class="ref lu" href="#m222" data-target="m222"><span class="ref-when">10/22 14:48</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m232" data-target="m232"><span class="ref-when">10/22 15:15</span><span class="ref-who">徐○</span></a><a class="ref" href="#m233" data-target="m233"><span class="ref-when">10/22 15:19</span><span class="ref-who">徐○</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>推薦方案（原生）：KKday dtac 10 天 50 GB 171 元，年底前開通可升級成高速吃到飽，很划算；kardear 原生 eSIM（Dtac/Truemove）10 天 50 GB 130 元。</p><div class="refs"><a class="ref lu" href="#m136" data-target="m136"><span class="ref-when">10/22 12:47</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m137" data-target="m137"><span class="ref-when">10/22 12:49</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m163" data-target="m163"><span class="ref-when">10/22 13:24</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m234" data-target="m234"><span class="ref-when">10/22 15:36</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>只能用實體卡的人：kardear 實體 SIM 10 天 50 GB 199 元；或蝦皮這家，選「原生 true 10 天吃到飽」，三人一起買每人約 170 元，板橋可自取、有 LINE 客服。<b>實體卡請提早下單，郵寄要預留 5 個工作天</b>。</p><div class="refs"><a class="ref lu" href="#m213" data-target="m213"><span class="ref-when">10/22 14:01</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m220" data-target="m220"><span class="ref-when">10/22 14:03</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m147" data-target="m147"><span class="ref-when">10/22 13:08</span><span class="ref-who">徐○</span></a><a class="ref" href="#m154" data-target="m154"><span class="ref-when">10/22 13:16</span><span class="ref-who">徐○</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>用實體卡時：手機能雙卡雙待的話，泰國卡放在 SIM1，把台灣卡的行動數據和漫遊關掉。<b>換下的台灣 SIM 卡不要弄丟</b>，可以用小夾鏈袋或小盒子裝好。</p><div class="refs"><a class="ref lu" href="#m234" data-target="m234"><span class="ref-when">10/22 15:36</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m299" data-target="m299"><span class="ref-when">10/22 16:24</span><span class="ref-who">陳信宏</span></a><a class="ref lu" href="#m300" data-target="m300"><span class="ref-when">10/22 16:26</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m302" data-target="m302"><span class="ref-when">10/22 16:29</span><span class="ref-who">高○○</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>泰國電信商 AIS 有提供大會參加者的吃到飽方案，詳情等大會通知；大會的方案主要只考慮翻譯需求（Wordly 最低 6/6 Mbps）。紹鳴自己是另外在 KKday 買，比較便宜，速度和流量也比較多。</p><div class="refs"><a class="ref" href="#m34" data-target="m34"><span class="ref-when">10/6 19:05</span><span class="ref-who">陳信宏</span></a><a class="ref lu" href="#m200" data-target="m200"><span class="ref-when">10/22 13:41</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt"><p>信宏哥的經驗：直接用中華電信原號漫遊最方便，也不用擔心 SIM 不相容或設定失敗，安全有保障；市面上很多 eSIM/SIM 卡跟中國或香港電信商有關。</p><div class="refs"><a class="ref" href="#m34" data-target="m34"><span class="ref-when">10/6 19:05</span><span class="ref-who">陳信宏</span></a><a class="ref" href="#m37" data-target="m37"><span class="ref-when">10/6 19:15</span><span class="ref-who">高○○</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>買團購的 1.1 GB/日 共用方案可能不夠用，降速到 128 kbps 可能聽不了翻譯。</p><div class="refs"><a class="ref lu" href="#m168" data-target="m168"><span class="ref-when">10/22 13:31</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-gear"><h3>電器與手機帳號</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>延長線</b>：台灣很少有 220V 的延長線，<b>不要帶標示 125V 的延長線</b>去泰國用。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>出發前確認手機可以登入學園帳號、Okta，兩步驟驗證都能正常用，有問題可以找紹鳴。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-transit"><h3>曼谷交通</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>建議搭捷運到 <b>Airport Rail Link（ARL）A7 站</b>，這是離台灣同工住的飯店最近的站。A7 走到飯店約 750 公尺（步行 10 分鐘，有人行道）；兩家飯店走到會場約 500 公尺～1 公里，7～15 分鐘。（對照：GCTC 走到公館站 3 號出口約 800 公尺。）</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m63" data-target="m63"><span class="ref-when">10/7 21:08</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>叫車的話，請司機<b>走高速公路</b>（過路費自付），車資在車上付現。最好的方式是在台灣先訂好接機車，台灣的旅遊網站可以開發票。</p><div class="refs"><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>大會網站 Venue 頁有很多交通指引檔案，請依自己的行程參考。另有曼谷捷運地圖。</p><div class="refs"><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a><a class="ref" href="#m565" data-target="m565"><span class="ref-when">10/31 18:02</span><span class="ref-who">陳信宏</span></a></div></li></ul></section><section class="topic" id="s-checkin"><h3>飯店入住與大會報到</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>飯店下午 3 點才能入住。<b>最推薦先入住飯店再去報到</b>：不用提著大包小包走去會場，也能先熟悉隔天早上的路線。如果還不能入住，就先把行李寄放在飯店櫃檯。</p><div class="refs"><a class="ref lu" href="#m79" data-target="m79"><span class="ref-when">10/16 11:27</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m691" data-target="m691"><span class="ref-when">11/3 15:47</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>報到時間：11/9（一）13:00～21:30</b>，地點是曼谷盛泰瀾酒店會議中心（Centara Grand）<b>22 樓</b>。</p><div class="refs"><a class="ref lu" href="#m79" data-target="m79"><span class="ref-when">10/16 11:27</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m629" data-target="m629"><span class="ref-when">11/3 12:34</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m686" data-target="m686"><span class="ref-when">11/3 15:26</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>每個人（小孩也是）都有自己的報到信和專屬 QR code，用手機畫面或紙本給註冊團隊掃。</p><div class="refs"><a class="ref lu" href="#m629" data-target="m629"><span class="ref-when">11/3 12:34</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>名牌怎麼領</b>：4 歲以下的小孩，11/10 由托兒處發名牌；4～18 歲的小孩，到「其他及 4-18 歲兒童」櫃檯領，<b>這跟全禱日時報告的不一樣</b>；19 歲以上的孩子跟父母一起領。除了 4 歲以下，其他人都是 11/9 在 22 樓報到。</p><div class="refs"><a class="ref lu" href="#m629" data-target="m629"><span class="ref-when">11/3 12:34</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m686" data-target="m686"><span class="ref-when">11/3 15:26</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>戴特殊顏色名牌掛繩的人有安全需求，拍照時請避開他們。</b></p><div class="refs"><a class="ref lu" href="#m629" data-target="m629"><span class="ref-when">11/3 12:34</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span><b>早上進會場</b>：大會 09:00 開始，建議至少提早 20 分鐘到，因為建築很大、會場在 22 樓，1,800 人搭電梯要等很久。樓下購物中心早上 10 點才開，大馬路邊的商場入口還沒開。<b>強烈建議 11/9 報到時，先走一次購物中心後面的會議中心正門</b>，免得 11/10 早上迷路。</p><div class="refs"><a class="ref lu" href="#m653" data-target="m653"><span class="ref-when">11/3 13:11</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-session"><h3>大會期間：翻譯與研討會</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>大會有即時翻譯，請先下載 <b>Wordly</b> App（不用註冊帳號）。記得帶耳機（有線、無線都可以，但不要用飛機上拿的）和行動電源，並確保網路夠用。</p><div class="refs"><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>研討會（工作坊）<b>不用先登記</b>，現場直接進去就好，可以先上網看有哪些場次。「From Conversations to Journeys…」這場要自備筆電或平板和網路。</p><div class="refs"><a class="ref lu" href="#m586" data-target="m586"><span class="ref-when">11/3 12:18</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m650" data-target="m650"><span class="ref-when">11/3 12:35</span><span class="ref-who">呂紹鳴</span></a><a class="ref lu" href="#m651" data-target="m651"><span class="ref-when">11/3 12:36</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-kids"><h3>兒童</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>兒童看顧：要帶一個寫上名字的包包裝必需品，還有寫名字的水壺。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>每個孩子要帶一樣東西來分享，可以代表自己的文化或興趣，零食也可以。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section><section class="topic" id="s-safety"><h3>禮儀與安全</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>大會網站 Venue 頁有更新關於藥品的資訊。請注意宗教和皇室禮儀，網路留言也要小心（曾有移工在伊斯蘭國家因網路留言被判刑）。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt"><p>ASF 危機處理小組在全禱日的報告，以及簡易版危機處理 SOP（都是圖片，請到 LINE 群組或相簿看）。</p><div class="refs"><a class="ref" href="#m106" data-target="m106"><span class="ref-when">10/19 09:14</span><span class="ref-who">明○</span></a><a class="ref" href="#m545" data-target="m545"><span class="ref-when">10/29 15:20</span><span class="ref-who">明○</span></a></div></li></ul></section><section class="topic" id="s-prayer"><h3>禱告與籌款</h3><ul><li class="pt from-lu"><p><span class="badge">紹鳴</span>請加入 40 天禱告接力，並分享給事工夥伴。</p><div class="refs"><a class="ref lu" href="#m44" data-target="m44"><span class="ref-when">10/7 19:56</span><span class="ref-who">呂紹鳴</span></a></div></li><li class="pt"><p>鼓勵寫一封代禱信給事奉夥伴，邀請他們為你和 ASF 禱告；可以和平常的事工代禱信一起發。如果這趟費用還不夠，也可以把握機會籌款。大會網站有禱告資源。</p><div class="refs"><a class="ref" href="#m394" data-target="m394"><span class="ref-when">10/24 11:16</span><span class="ref-who">陳信宏</span></a><a class="ref" href="#m395" data-target="m395"><span class="ref-when">10/24 11:18</span><span class="ref-who">陳信宏</span></a><a class="ref" href="#m396" data-target="m396"><span class="ref-when">10/24 11:19</span><span class="ref-who">陳信宏</span></a><a class="ref" href="#m397" data-target="m397"><span class="ref-when">10/24 11:19</span><span class="ref-who">陳信宏</span></a></div></li><li class="pt from-lu"><p><span class="badge">紹鳴</span>報名時有認領代禱服事的同工，請加入代禱者 WhatsApp 群組，會前每天守望禱告；大會期間，代禱者每天早上會在會場行走禱告。不確定有沒有認領的人也歡迎加入。</p><div class="refs"><a class="ref lu" href="#m576" data-target="m576"><span class="ref-when">11/2 07:53</span><span class="ref-who">呂紹鳴</span></a></div></li></ul></section>
+      <div class="note">
+        <b>這份整理沒有包含的內容</b>
+        <ul>
+          <li>群組裡的<b>圖片</b>（例如危機處理小組的報告、eSIM 截圖），以及 LINE <b>記事本、公告、相簿</b>的內容。LINE 匯出的文字檔不包含這些，請到群組裡看。</li>
+          <li>已收回的訊息。</li>
+          <li>這是公開版：已移除手機號碼、WhatsApp 邀請連結、內部檔案連結和信箱，呂紹鳴、陳信宏以外的同工名字改成縮寫。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="log">
+      <h2>完整原始對話</h2>
+      <p class="sub">整個群組從建立到 11/3 的全部訊息，照時間排序。呂紹鳴的發言用底色標出來。</p>
+      <div class="controls" role="group" aria-label="篩選訊息">
+        <label><input type="checkbox" id="f-lu"> 只看呂紹鳴</label>
+        <label><input type="checkbox" id="f-cited"> 只看整理有引用的</label>
+        <label><input type="checkbox" id="f-media" checked> 隱藏圖片／貼圖</label>
+        <label><input type="checkbox" id="f-sys" checked> 隱藏系統訊息</label>
+        <a class="totop" href="#top">回到頂端 ↑</a>
+      </div>
+      <div class="day"><h4 class="daylabel">10/6（二）</h4><div class="msg sys" id="m2"><span class="t">15:33</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m3"><span class="t">15:33</span><span class="sysbody">某位成員 收回了一則訊息</span></div><div class="msg sys" id="m4"><span class="t">15:33</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m5"><span class="t">15:33</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m6"><span class="t">15:33</span><span class="sysbody">蘇○○ 成員加入群組</span></div><div class="msg sys" id="m7"><span class="t">15:33</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m8"><span class="t">15:33</span><span class="sysbody">周○○ 成員加入群組</span></div><div class="msg sys" id="m9"><span class="t">15:33</span><span class="sysbody">S. 成員加入群組</span></div><div class="msg sys" id="m10"><span class="t">15:33</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m11"><span class="t">15:33</span><span class="sysbody">惠○ 成員加入群組</span></div><div class="msg sys" id="m12"><span class="t">15:33</span><span class="sysbody">陳信宏 成員加入群組</span></div><div class="msg sys" id="m13"><span class="t">15:33</span><span class="sysbody">楊○○ 成員加入群組</span></div><div class="msg sys" id="m14"><span class="t">15:34</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m15"><span class="t">15:34</span><span class="sysbody">立○ 成員加入群組</span></div><div class="msg sys" id="m16"><span class="t">15:34</span><span class="sysbody">朴○○ 成員加入群組</span></div><div class="msg sys" id="m17"><span class="t">15:34</span><span class="sysbody">黃○○ 成員加入群組</span></div><div class="msg sys" id="m18"><span class="t">15:34</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m19"><span class="t">15:34</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m20"><span class="t">15:35</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg lu" id="m21"><div class="meta"><span class="t">16:05</span><span class="who">呂紹鳴</span></div><div class="body">（內部檔案連結公開版已移除，請看 LINE 群組）</div></div><div class="msg lu" id="m22"><div class="meta"><span class="t">16:06</span><span class="who">呂紹鳴</span></div><div class="body">全禱日的簡報</div></div><div class="msg media" id="m23"><div class="meta"><span class="t">16:06</span><span class="who">許○○</span></div><span class="mediatag">貼圖</span></div><div class="msg sys" id="m24"><span class="t">16:06</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg sys" id="m25"><span class="t">16:07</span><span class="sysbody">周○○ 成員加入群組</span></div><div class="msg media" id="m26"><div class="meta"><span class="t">16:10</span><span class="who">慧○</span></div><span class="mediatag">貼圖</span></div><div class="msg media" id="m27"><div class="meta"><span class="t">16:58</span><span class="who">黃○○</span></div><span class="mediatag">貼圖</span></div><div class="msg media" id="m28"><div class="meta"><span class="t">18:51</span><span class="who">S.</span></div><span class="mediatag">貼圖</span></div><div class="msg lu" id="m29"><div class="meta"><span class="t">18:57</span><span class="who">呂紹鳴</span></div><div class="body">我們有115位同工參加，可以請同工把沒來全禱日的同工拉進群組</div></div><div class="msg" id="m30"><div class="meta"><span class="t">19:00</span><span class="who">陳信宏</span></div><div class="body">非常感謝紹鳴花時間整理關於ASF的簡報和今天向同工的報告！</div></div><div class="msg" id="m31"><div class="meta"><span class="t">19:01</span><span class="who">慧○</span></div><div class="body">超級感恩！非常詳盡</div></div><div class="msg media" id="m32"><div class="meta"><span class="t">19:01</span><span class="who">慧○</span></div><span class="mediatag">貼圖</span></div><div class="msg lu" id="m33"><div class="meta"><span class="t">19:01</span><span class="who">呂紹鳴</span></div><div class="body">很雜，剛剛想到有一些細節好像漏掉沒提到，我再整理公告</div></div><div class="msg cited" id="m34"><div class="meta"><span class="t">19:05</span><span class="who">陳信宏</span></div><div class="body">補充，泰國電信商AIS提供ASF參加者的吃到飽上網的方案，詳情與購買SIM卡的方式，請等待10月的大會通知。同工可以自由選擇，不是一定使用這個方案。我個人國外旅遊或短宣也經常使用原號漫遊(中華電信)，我覺得很方便，不用擔心購買的SIM不相容，和上網設定失敗等問題。漫遊上網安全有保障。目前市面大部分販售的eSIM/SIM卡都跟中國大陸/香港電信商有關</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg cited" id="m35"><div class="meta"><span class="t">19:09</span><span class="who">陳信宏</span></div><div class="body">另外，我習慣出國前把外幣先換好，不用擔心到當地才尋找尋換錢的地方，還要花心思比價。除非我身上還有其他國家的現鈔，在台灣換不划算，才帶到當地換。例如 拿美金換泰銖。</div><div class="back"><a href="#s-money">↩ 換錢、押金與報帳</a></div></div><div class="msg cited" id="m36"><div class="meta"><span class="t">19:14</span><span class="who">陳信宏</span></div><div class="body">我到台銀換外幣時，我通常已經估計好這趟旅程的預算，避免在國外過度消費。台灣信用卡在國外或境外網站刷卡時，手續費通常為 1.5%</div><div class="back"><a href="#s-money">↩ 換錢、押金與報帳</a></div></div><div class="msg cited" id="m37"><div class="meta"><span class="t">19:15</span><span class="who">高○○</span></div><div class="body">如果esim要不是中國或香港有關，我通常是買當地原生卡，當然最簡單就是漫遊</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg sys" id="m38"><span class="t">19:59</span><span class="sysbody">朴○○ 成員加入群組</span></div><div class="msg sys" id="m39"><span class="t">20:10</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m40"><span class="t">21:11</span><span class="sysbody">某位成員 成員加入群組</span></div></div><div class="day"><h4 class="daylabel">10/7（三）</h4><div class="msg sys" id="m42"><span class="t">06:43</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m43"><span class="t">10:59</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg lu cited" id="m44"><div class="meta"><span class="t">19:56</span><span class="who">呂紹鳴</span></div><div class="body">ASF26官方寄出提醒信件，請收信！
+重點摘要：
+1.請把信件轉給您的配偶及成年家人。官方只寄給報名時用的email。
+2.大會的通訊是用WatsApp，行前通知會公告如何加入群組，需要安全通信請聯絡信宏哥或回覆大會的信件
+3.再次確認護照到期日在2027/5/6之後
+目前台、馬、港、澳、美、韓是免簽，如果您曾經被拒絕入境請了解原因
+4.班機有變更請通知我及信宏哥
+5. asf26.com 網站有更新Venue頁面，關於藥品，注意宗教及皇室禮儀(最近有個極端例子是移工在伊斯蘭國家因為網路留言被判刑)
+6.兒童看顧要帶有名字的包包放必需品+有名字的水壺
+7.兒童要帶一件物品分享，可代表文化或興趣喜好，零食也可
+更多資料請看asf26.com的FAQs頁面
+8.請加入40天禱告接力並分享給事工夥伴
+
+我另外加上
+1.要帶延長線請特別注意：台灣很少有220V的延長線，請不要❌🚫⛔帶標示125V的延長線去泰國使用
+2.請確定手機可以登入學園帳號、okta、兩步驟驗證都可以正常使用，還有一個月的時間，有問題可以找我處理
+3.交通我建議捷運搭到ARL線A7站，A7到飯店約750公尺步行10分鍾人行道，兩家飯店飯店到會場500公尺或1公里步行約7-15分鐘</div><div class="back"><a href="#s-passport">↩ 證件與入境</a><a href="#s-check">↩ 大會通知信與資料核對</a><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a><a href="#s-gear">↩ 電器與手機帳號</a><a href="#s-transit">↩ 曼谷交通</a><a href="#s-kids">↩ 兒童</a><a href="#s-safety">↩ 禮儀與安全</a><a href="#s-prayer">↩ 禱告與籌款</a></div></div><div class="msg sys" id="m61"><span class="t">19:59</span><span class="sysbody">楊○○ 更新了記事本</span></div><div class="msg sys" id="m62"><span class="t">20:09</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg lu cited" id="m63"><div class="meta"><span class="t">21:08</span><span class="who">呂紹鳴</span></div><div class="body">參考距離：GCTC走路到公館站3號出口約800公尺</div><div class="back"><a href="#s-transit">↩ 曼谷交通</a></div></div><div class="msg sys" id="m64"><span class="t">21:52</span><span class="sysbody">黃○○ 成員加入群組</span></div></div><div class="day"><h4 class="daylabel">10/8（四）</h4><div class="msg sys" id="m66"><span class="t">08:16</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m67"><span class="t">11:05</span><span class="sysbody">某位成員 成員加入群組</span></div></div><div class="day"><h4 class="daylabel">10/13（二）</h4><div class="msg sys" id="m69"><span class="t">12:21</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m70"><span class="t">12:21</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m71"><span class="t">12:21</span><span class="sysbody">金○○ 成員加入群組</span></div><div class="msg sys" id="m72"><span class="t">12:21</span><span class="sysbody">迦○ 收回了一則訊息</span></div><div class="msg sys" id="m73"><span class="t">12:21</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m74"><span class="t">12:22</span><span class="sysbody">某位成員 成員加入群組</span></div></div><div class="day"><h4 class="daylabel">10/15（四）</h4><div class="msg sys" id="m76"><span class="t">14:11</span><span class="sysbody">柯○○ 成員加入群組</span></div></div><div class="day"><h4 class="daylabel">10/16（五）</h4><div class="msg sys" id="m78"><span class="t">11:26</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg lu cited" id="m79"><div class="meta"><span class="t">11:27</span><span class="who">呂紹鳴</span></div><div class="body">同工們平安：
+
+感謝主，ASF的同工排好了1800多人的住宿。
+
+大會的通知信重點提示
+1.請記得將通知信轉發給同行的家屬
+2.核對個人資料：
+    a.手機電話號碼(為了加入ASF26單向公告的 Whats App群組)，要是用於註冊Whats App的號碼。若沒有用過Whats App，請下載並註冊。參考教學：
+<a href="https://www.salesmartly.com/tc/blog/docs/whatsapp-guide-for-beginners" target="_blank" rel="noopener">https://www.salesmartly.com/tc/blog/docs/whatsapp-guide-for-beginners</a>
+
+    b.確定航班資料及入住退房日期，可以印出大會寄出有飯店資料的通知信件當作給海關的參考文件。
+     
+有需要更正請回覆大會的通知信、寄給 Y. （信箱公開版已移除）&gt;
+
+3.飯店入住時間是下午3點，提早到達，可以先將行李寄放在飯店櫃檯。
+   再到會場(報到時間： 11/9  13:00-21:30，請於22F 會場辦理）)
+
+4.👉👉👉有一個沒有報告過的資訊：‼️‼️‼️
+在曼谷入住飯店時，每一間房都會收押金，約 4000泰銖（現金或信用卡預授權）作為雜費與損壞押金。押金是依房間數量計算。
+
+
+謝謝/ Thank You</div><div class="back"><a href="#s-passport">↩ 證件與入境</a><a href="#s-check">↩ 大會通知信與資料核對</a><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a><a href="#s-money">↩ 換錢、押金與報帳</a><a href="#s-checkin">↩ 飯店入住與大會報到</a></div></div><div class="msg sys" id="m101"><span class="t">12:36</span><span class="sysbody">陳信宏 設定了公告</span></div><div class="msg cited" id="m102"><div class="meta"><span class="t">12:38</span><span class="who">陳信宏</span></div><div class="body">通知信中有列出您所住宿的飯店名稱，敬請各位同工留意</div><div class="back"><a href="#s-check">↩ 大會通知信與資料核對</a></div></div><div class="msg cited" id="m103"><div class="meta"><span class="t">12:40</span><span class="who">陳信宏</span></div><div class="body">還有飯店地址和Google 地圖的連結</div><div class="back"><a href="#s-check">↩ 大會通知信與資料核對</a></div></div><div class="msg cited" id="m104"><div class="meta"><span class="t">12:41</span><span class="who">陳信宏</span></div><div class="body">請不要跑錯飯店</div><div class="back"><a href="#s-check">↩ 大會通知信與資料核對</a></div></div></div><div class="day"><h4 class="daylabel">10/19（一）</h4><div class="msg cited" id="m106"><div class="meta"><span class="t">09:14</span><span class="who">明○</span></div><div class="body">以下是ASF危機處理小組在全禱日的報告：</div><div class="back"><a href="#s-safety">↩ 禮儀與安全</a></div></div><div class="msg media" id="m107"><div class="meta"><span class="t">09:14</span><span class="who">明○</span></div><span class="mediatag">圖片</span></div><div class="msg media" id="m108"><div class="meta"><span class="t">09:14</span><span class="who">明○</span></div><span class="mediatag">圖片</span></div><div class="msg media" id="m109"><div class="meta"><span class="t">09:14</span><span class="who">明○</span></div><span class="mediatag">圖片</span></div><div class="msg media" id="m110"><div class="meta"><span class="t">09:14</span><span class="who">明○</span></div><span class="mediatag">圖片</span></div><div class="msg sys" id="m111"><span class="t">10:08</span><span class="sysbody">蕎○ 設定了公告</span></div><div class="msg sys" id="m112"><span class="t">12:26</span><span class="sysbody">周○○ 成員加入群組</span></div><div class="msg sys" id="m113"><span class="t">12:27</span><span class="sysbody">周○○ 更新了相簿</span></div></div><div class="day"><h4 class="daylabel">10/22（四）</h4><div class="msg lu cited" id="m115"><div class="meta"><span class="t">12:10</span><span class="who">呂紹鳴</span></div><div class="body">信宏哥找到的便宜方案，非原生/漫遊網路 (Roaming)
+<a href="https://kardear.com/product/esim-thailand-dis/" target="_blank" rel="noopener">https://kardear.com/product/esim-thailand-dis/</a>
+
+這不是原生網路(不是直接連線至該國家當地電信商)
+資安不負責喔！最好避免連線處理敏感資料、或登入網銀等等。</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu media" id="m122"><div class="meta"><span class="t">12:10</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg sys" id="m123"><span class="t">12:12</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg lu cited" id="m124"><div class="meta"><span class="t">12:44</span><span class="who">呂紹鳴</span></div><div class="body">KKDAY 有漫遊的，也有當地原生的方案
+
+漫遊的會標示：
+本eSIM之電信數據漫遊服務由SmarTone Telecommunications Holdings Limited(數碼通電訊集團)/CMHK香港商中移國際股份有限公司提供</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu" id="m128"><div class="meta"><span class="t">12:44</span><span class="who">呂紹鳴</span></div><div class="body">當地原生的方案
+<a href="https://www.kkday.com/zh-tw/product/136927-esim-thailand-dtac-5g-7-10-days-unlimited-data" target="_blank" rel="noopener">https://www.kkday.com/zh-tw/product/136927-esim-thailand-dtac-5g-7-10-days-unlimited-data</a></div></div><div class="msg lu" id="m130"><div class="meta"><span class="t">12:46</span><span class="who">呂紹鳴</span></div><div class="body">
+10天50G 171元</div></div><div class="msg lu media" id="m134"><div class="meta"><span class="t">12:46</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu media" id="m135"><div class="meta"><span class="t">12:46</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu cited" id="m136"><div class="meta"><span class="t">12:47</span><span class="who">呂紹鳴</span></div><div class="body">【❗期間限定】2026年12月31日前啟用eSIM，10天50GB方案將從高速50GB升級為高速無限流量吃到飽！</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m137"><div class="meta"><span class="t">12:49</span><span class="who">呂紹鳴</span></div><div class="body"><a href="https://www.kkday.com/zh-tw/product/136927-esim-thailand-dtac-5g-7-10-days-unlimited-data" target="_blank" rel="noopener">https://www.kkday.com/zh-tw/product/136927-esim-thailand-dtac-5g-7-10-days-unlimited-data</a>
+這方案是原生網路，10天50G 171元，可以升級為高速無限流量吃到飽！
+不是最便宜但很划算喔~
+但是eSIM，有些手機不能用，要注意</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg" id="m141"><div class="meta"><span class="t">12:57</span><span class="who">蘇○○</span></div><div class="body">好像很多手機都不支援eSIM，除非是IPOHNE新款手機。</div></div><div class="msg cited" id="m142"><div class="meta"><span class="t">13:00</span><span class="who">周○○</span></div><div class="body">IPHONE XS SE  11系列之後基本上都可以用</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu" id="m143"><div class="meta"><span class="t">13:01</span><span class="who">呂紹鳴</span></div><div class="body">我的pixel 8可以</div></div><div class="msg lu media" id="m144"><div class="meta"><span class="t">13:02</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu media" id="m145"><div class="meta"><span class="t">13:04</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu cited" id="m146"><div class="meta"><span class="t">13:04</span><span class="who">呂紹鳴</span></div><div class="body">我的是這樣，有[ EID ]</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg cited" id="m147"><div class="meta"><span class="t">13:08</span><span class="who">徐○</span></div><div class="body">習慣用實體網卡的同工，如果有蝦皮，也是可以買這家（個人買過不下十次不同國家的）
+<a href="https://s.shopee.tw/9zyhcLB2s6" target="_blank" rel="noopener">https://s.shopee.tw/9zyhcLB2s6</a>
+務必選 「原生true10天吃到飽」方案最划算 認準原生比較穩！
+原價180
+找三個人一起買會折30，等於一個人170</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg" id="m152"><div class="meta"><span class="t">13:12</span><span class="who">陳信宏</span></div><div class="body">這家我買過</div></div><div class="msg lu" id="m153"><div class="meta"><span class="t">13:15</span><span class="who">呂紹鳴</span></div><div class="body">剛就檢查到麗○姊的手機不能用eSIM，但能雙卡雙代能用實體卡</div></div><div class="msg cited" id="m154"><div class="meta"><span class="t">13:16</span><span class="who">徐○</span></div><div class="body">他在板橋實體店可自取，也有LINE客服，不會找不到人～
+<a href="https://line.me/R/ti/p/@thv7310m" target="_blank" rel="noopener">https://line.me/R/ti/p/@thv7310m</a>
+提供各位參考唷</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m157"><div class="meta"><span class="t">13:16</span><span class="who">呂紹鳴</span></div><div class="body">同工可以直接問Google ：
+
+[手機品牌+型號] 能用eSIM嗎? 能不能雙卡雙待？</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg sys" id="m160"><span class="t">13:17</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg sys" id="m161"><span class="t">13:17</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg" id="m162"><div class="meta"><span class="t">13:18</span><span class="who">陳信宏</span></div><div class="body">這個方案是原生eSIM</div></div><div class="msg lu cited" id="m163"><div class="meta"><span class="t">13:24</span><span class="who">呂紹鳴</span></div><div class="body">信宏哥找到的便宜方案，原生網路電信公司： 泰國 (Dtac／Truemove)
+<a href="https://kardear.com/product/esim-thailand-dis/" target="_blank" rel="noopener">https://kardear.com/product/esim-thailand-dis/</a></div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg media" id="m166"><div class="meta"><span class="t">13:26</span><span class="who">蘇○○</span></div><span class="mediatag">圖片</span></div><div class="msg" id="m167"><div class="meta"><span class="t">13:29</span><span class="who">蘇○○</span></div><div class="body">如果有人會使用，我也可以一起團購。 </div></div><div class="msg lu cited" id="m168"><div class="meta"><span class="t">13:31</span><span class="who">呂紹鳴</span></div><div class="body">每日總量1.1G，還共用可能不太夠用喔！降速到128kbps可能也無法順利收聽翻譯。</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg" id="m169"><div class="meta"><span class="t">13:32</span><span class="who">蘇○○</span></div><div class="body">我是要團購，沒有要跟人共用。 如果有困難，其實就是中華電信直接手機APP申請國際漫遊，是比較貴沒有錯</div></div><div class="msg lu cited" id="m170"><div class="meta"><span class="t">13:33</span><span class="who">呂紹鳴</span></div><div class="body">Wordly App翻譯軟體的網路需求
+理論最大值估算（最極端的情況）
+
+若完全根據 Wordly 官方說明文件
+提到的聽眾基本頻寬需求6 Mbps（這通常包含應對 500 人在線時防抖動、維持低延遲的頻寬緩衝門檻值）：
+• 每秒下載： 6 Mbps = 0.75 MB/s
+• 連續 8小時（28,800 秒）： 理論上最大的數據接收上限為 20 GB。
+⚠️ 注意事項： 除非您的裝置背景有其他程式同時在跑，或者網路環境極差導致大量重複封包請求，否則正常聆聽絕對不會達到 20 GB 的最大上限。
+
+💡 出行或活動建議
+
+如果您是出差或在沒有 Wi-Fi 的環境下要使用手機熱點聆聽：
+• 購買日常的2GB 流量包 就足夠完整聽完 8 小時。
+• 如果您的手機行動方案是「流量用盡後降速」，只要降速後的頻寬大於 128 kbps，通常仍可正常接收語音；但若要維持官方建議的流暢度與最低延遲，仍建議在訊號良好的 4G/5G 或固定 Wi-Fi 下使用。
+
+只用翻譯App正常情況最低需：
+流量 2 GB/每日、頻寬速度 10Mbps
+
+請自行再加上其他上網需求(連線時LINE、其他App...等等會再背景吃掉網路流量)
+
+
+👉👉👉👉結論：👈👈👈👈
+購買方案可選
+流量5~10 GB/每日、
+頻寬速度 10~ 20Mbps</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg sys" id="m195"><span class="t">13:34</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg cited" id="m196"><div class="meta"><span class="t">13:38</span><span class="who">林○○</span></div><div class="body">頻寬速度很難保證，因為到時候1800人聚集在同一個會場，要看運氣XD</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m197"><div class="meta"><span class="t">13:39</span><span class="who">呂紹鳴</span></div><div class="body">是阿是阿～到時看哪家的訊號強~</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m198"><div class="meta"><span class="t">13:39</span><span class="who">呂紹鳴</span></div><div class="body">或是哪家的最少人用</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m199"><div class="meta"><span class="t">13:40</span><span class="who">呂紹鳴</span></div><div class="body">附近是非常密集的觀光購物景點，理論上建置的網路訊號不會太差</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m200"><div class="meta"><span class="t">13:41</span><span class="who">呂紹鳴</span></div><div class="body">同工們可以等等大會的方案，之後的行前通知會有大會簽約的方案</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg" id="m201"><div class="meta"><span class="t">13:42</span><span class="who">徐○</span></div><div class="body">沒錯～～原生卡可能也是會卡頓 而且泰國就兩巨頭
+AIS-&gt;中華電信
+TURE-&gt;遠傳、台哥大
+大概是這感覺～</div></div><div class="msg lu" id="m205"><div class="meta"><span class="t">13:44</span><span class="who">呂紹鳴</span></div><div class="body">泰國電信商 dtac 現已與 True 完成合併並以雙品牌運營</div></div><div class="msg sys" id="m206"><span class="t">13:48</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m207"><span class="t">13:49</span><span class="sysbody">呂紹鳴 設定了公告</span></div><div class="msg cited" id="m208"><div class="meta"><span class="t">13:49</span><span class="who">高○○</span></div><div class="body">建議一律在台灣機場開通，不然去泰國esim幾乎無法開通，朋友實測跟我說的</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m209"><div class="meta"><span class="t">13:52</span><span class="who">呂紹鳴</span></div><div class="body">👉👉👉很重要～要注意：✨✨✨✨
+安裝eSIM須有網路，安裝前請確認環境中有可用WiFi 或是有可用行動數據。
+✨✨✨務必在搭機前，於台灣機場先開通✨✨✨</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg sys" id="m212"><span class="t">13:52</span><span class="sysbody">呂紹鳴 設定了公告</span></div><div class="msg lu cited" id="m213"><div class="meta"><span class="t">14:01</span><span class="who">呂紹鳴</span></div><div class="body">給只能用實體卡的同工，
+電信公司： 泰國 (Dtac／Truemove)，
+10天50GB，199元
+請提早下單，郵寄實體SIM到家需要預留5天的工作日
+
+<a href="https://kardear.com/product/%e6%b3%b0%e5%9c%8bsim%e5%8d%a1-10%e5%a4%a950gb/" target="_blank" rel="noopener">https://kardear.com/product/%e6%b3%b0%e5%9c%8bsim%e5%8d%a1-10%e5%a4%a950gb/</a></div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg sys" id="m219"><span class="t">14:01</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg lu cited" id="m220"><div class="meta"><span class="t">14:03</span><span class="who">呂紹鳴</span></div><div class="body">買實體SIM卡，👉👉請提早下單，
+郵寄實體SIM到家需要👉👉預留5天的工作日</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m222"><div class="meta"><span class="t">14:48</span><span class="who">呂紹鳴</span></div><div class="body">2025年起根據泰國國家廣播電視暨通訊委員會（NBTC）的法規，為了防範電信詐騙，所有在泰國使用的原生實體 SIM 卡與原生 eSIM（附帶泰國本地電話號碼），
+一律都要綁定使用者的身分才能啟用網路與通訊功能。
+
+實名制登記，請按照網路供應商的說明操作。</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m226"><div class="meta"><span class="t">14:50</span><span class="who">呂紹鳴</span></div><div class="body">買非當地電信商提供的非原生網路之漫遊方案就不用登記
+
+這類網卡沒有泰國當地的電話號碼。如果你在泰國旅遊期間{需要接聽司機電話、預約餐廳、或是註冊需要泰國手機號碼的當地 App（如某些叫車或外送平台）}，漫遊卡就無法提供這項功能。</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg sys" id="m229"><span class="t">15:07</span><span class="sysbody">徐○ 收回了一則訊息</span></div><div class="msg sys" id="m230"><span class="t">15:09</span><span class="sysbody">徐○ 收回了一則訊息</span></div><div class="msg sys" id="m231"><span class="t">15:09</span><span class="sysbody">徐○ 收回了一則訊息</span></div><div class="msg cited" id="m232"><div class="meta"><span class="t">15:15</span><span class="who">徐○</span></div><div class="body">保險起見…還是註冊好了～剛剛的話當我們說</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg cited" id="m233"><div class="meta"><span class="t">15:19</span><span class="who">徐○</span></div><div class="body">不過…我問了這家的客服，他們說他們的方案不用實名</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m234"><div class="meta"><span class="t">15:36</span><span class="who">呂紹鳴</span></div><div class="body">剛剛有人說訊息很亂，我小小整理一下
+以下僅供參考，小弟無法負責連線品質喔~
+
+在曼谷上網&amp;聽大會Wordly App翻譯功能的基本需求
+購買方案可選
+流量5~10 GB/每日、
+頻寬速度 10~ 20Mbps
+
+在曼谷上網方式主要有三大類
+1.台灣的門號開漫遊
+2.手機可以使用eSIM (手機撥號*#06#，有[ EID ]基本上可以)
+3.無法使用eSIM，只能裝實體SIM卡
+
+1.台灣的門號開漫遊
+打電話給客服，請客服開通國際漫遊，購買國際漫遊網路方案
+▶最無痛◀、但也貴
+
+2.手機可以使用eSIM (台灣買的手機只有iPhone 11之後 &amp; Pixel 5之後及少數三星能用)
+  a.非原生漫遊網路，不用實名制，缺點是資安風險，部分需要當地門號的服務無法使用
+
+       漫遊的會標示：本eSIM之電信數據漫遊服務由SmarTone Telecommunications Holdings Limited(數碼通電訊集團)/CMHK香港商中移國際股份有限公司提供
+ 
+   b.當地原生網路(需實名制登記)，AIS 或 dtac/True 兩大電信商提供
+
+信宏哥找到的便宜方案，原生網路電信公司： 泰國 (Dtac／Truemove) 10天50GB 130元
+<a href="https://kardear.com/product/esim-thailand-dis/" target="_blank" rel="noopener">https://kardear.com/product/esim-thailand-dis/</a>
+
+<a href="https://www.kkday.com/zh-tw/product/136927-esim-thailand-dtac-5g-7-10-days-unlimited-data" target="_blank" rel="noopener">https://www.kkday.com/zh-tw/product/136927-esim-thailand-dtac-5g-7-10-days-unlimited-data</a>
+這方案是原生網路，10天50G 171元，年底前開通可以升級為高速無限流量吃到飽！
+不是最便宜但很划算喔~
+
+
+3.只能用實體SIM卡(需實名制登記)
+部分手機能雙卡雙待，優先把泰國SIM卡放在SIM1卡槽，
+把台灣的SIM卡網路數據及漫遊功能&quot;關閉&quot;
+
+請提早下單，
+郵寄實體SIM到家需要預留5天的工作日
+
+a
+如果有蝦皮，也是可以買這家（徐○買過不下十次不同國家的）
+<a href="https://s.shopee.tw/9zyhcLB2s6" target="_blank" rel="noopener">https://s.shopee.tw/9zyhcLB2s6</a>
+務必選 「原生true10天吃到飽」方案最划算 認準原生比較穩！
+原價180
+找三個人一起買會折30，等於一個人170
+
+b
+電信公司： 泰國 (Dtac／Truemove)，
+10天50GB，199元
+<a href="https://kardear.com/product/%e6%b3%b0%e5%9c%8bsim%e5%8d%a1-10%e5%a4%a950gb/" target="_blank" rel="noopener">https://kardear.com/product/%e6%b3%b0%e5%9c%8bsim%e5%8d%a1-10%e5%a4%a950gb/</a>    
+
+以上操作請詳細閱讀供應商的說明</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg sys" id="m286"><span class="t">15:36</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg sys" id="m287"><span class="t">15:45</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m288"><span class="t">15:46</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg cited" id="m289"><div class="meta"><span class="t">15:47</span><span class="who">高○○</span></div><div class="body">我朋友是購買線上esim，我不知道會不會有差異，我目前購買我固定使用的廠商，他也是跟我說要在台灣安裝</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m290"><div class="meta"><span class="t">16:00</span><span class="who">呂紹鳴</span></div><div class="body">👉👉👉很重要～要注意：✨✨✨✨
+安裝eSIM須有網路，安裝前請確認環境中有可用WiFi 或是有可用行動數據。
+✨✨✨務必在搭機前，於家裡或台灣機場先安裝✨✨✨
+抵達曼谷再開啟始用
+
+少數公司設定不一樣，請詳閱購買的說明文件(部分可以用泰國機場網路設定)</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg sys" id="m296"><span class="t">16:00</span><span class="sysbody">呂紹鳴 設定了公告</span></div><div class="msg lu media" id="m297"><div class="meta"><span class="t">16:06</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu cited" id="m298"><div class="meta"><span class="t">16:07</span><span class="who">呂紹鳴</span></div><div class="body">要驗證手機是否支持eSIM，您可以在撥號界面輸入*#06#。如果顯示EID序號，則表示您的手機支援eSIM。</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg cited" id="m299"><div class="meta"><span class="t">16:24</span><span class="who">陳信宏</span></div><div class="body">使用實體泰國SIM卡的人要小心，換卡時不要把原本台灣的SIM弄丟了</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m300"><div class="meta"><span class="t">16:26</span><span class="who">呂紹鳴</span></div><div class="body">建議帶個小號的夾鏈袋裝起來或是小盒子(裝隱形眼鏡、牙線、電池...等等的小盒子ˋ)</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu cited" id="m301"><div class="meta"><span class="t">16:27</span><span class="who">呂紹鳴</span></div><div class="body"><a href="https://esim.holafly.com/zh/esim-guides/esim-phones/" target="_blank" rel="noopener">https://esim.holafly.com/zh/esim-guides/esim-phones/</a></div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg cited" id="m302"><div class="meta"><span class="t">16:29</span><span class="who">高○○</span></div><div class="body">以前我去日本時就做過這個蠢事，大家真的要放好，不然回來會變成原始人🤣</div><div class="back"><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a></div></div><div class="msg lu media" id="m303"><div class="meta"><span class="t">17:25</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu" id="m304"><div class="meta"><span class="t">17:26</span><span class="who">呂紹鳴</span></div><div class="body">ASF官方WhatsApp公告群組已經發出邀請，請同工到WhatsApp加入</div></div><div class="msg" id="m305"><div class="meta"><span class="t">17:29</span><span class="who">幼○</span></div><div class="body">沒收到啊</div></div><div class="msg lu" id="m306"><div class="meta"><span class="t">17:32</span><span class="who">呂紹鳴</span></div><div class="body">可能正在慢慢的增加1500人</div></div><div class="msg" id="m307"><div class="meta"><span class="t">17:33</span><span class="who">蘇○○</span></div><div class="body">我也沒有收到</div></div><div class="msg lu" id="m308"><div class="meta"><span class="t">17:33</span><span class="who">呂紹鳴</span></div><div class="body">同工身份約1500人，其餘身份約300人，給他們一些時間</div></div><div class="msg" id="m309"><div class="meta"><span class="t">17:54</span><span class="who">陳信宏</span></div><div class="body">可能他們先從國家聯絡人開始</div></div><div class="msg lu media" id="m310"><div class="meta"><span class="t">18:12</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu cited" id="m311"><div class="meta"><span class="t">18:12</span><span class="who">呂紹鳴</span></div><div class="body">Official one-way channel for ASF 2026 onsite announcements, schedule changes, venue information and important reminders.
+ASF 2026 現場公告、日程變更、場地資訊和重要提醒的官方單向頻道。</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div></div><div class="day"><h4 class="daylabel">10/23（五）</h4><div class="msg lu" id="m314"><div class="meta"><span class="t">14:10</span><span class="who">呂紹鳴</span></div><div class="body">
+
+（同工手機號碼名單，公開版已移除）</div></div><div class="msg lu cited" id="m346"><div class="meta"><span class="t">14:10</span><span class="who">呂紹鳴</span></div><div class="body">以上同工的電話我在加入WhatsApp的ASF社群時找不到資料，請同工確認
+1.電話是否正確？
+2.是否用這個電話申請WhatsApp帳號？
+
+找不到可能是您尚未申請WhatsApp帳號</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg" id="m351"><div class="meta"><span class="t">14:11</span><span class="who">楊○○</span></div><div class="body">我的電話是（電話已移除）</div></div><div class="msg lu" id="m352"><div class="meta"><span class="t">14:11</span><span class="who">呂紹鳴</span></div><div class="body">其餘同工我已經發出邀請，請打開WhatsApp 同意邀請</div></div><div class="msg sys" id="m353"><span class="t">14:12</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg" id="m354"><div class="meta"><span class="t">14:14</span><span class="who">楊○○</span></div><div class="body">我加入了。謝謝</div></div><div class="msg lu" id="m355"><div class="meta"><span class="t">14:17</span><span class="who">呂紹鳴</span></div><div class="body">請確認是不是，還沒註冊WhatsApp帳號？</div></div><div class="msg" id="m356"><div class="meta"><span class="t">14:24</span><span class="who">冠○</span></div><div class="body">抱歉，我剛剛才註冊好</div></div><div class="msg" id="m357"><div class="meta"><span class="t">14:26</span><span class="who">丁○○</span></div><div class="body">註冊了</div></div><div class="msg" id="m358"><div class="meta"><span class="t">14:27</span><span class="who">周○○</span></div><div class="body">我的電話是（電話已移除）
+謝謝</div></div><div class="msg" id="m360"><div class="meta"><span class="t">14:27</span><span class="who">賴○○</span></div><div class="body">我已經被加入WhatsApp群組，但上面沒我的名字？</div></div><div class="msg" id="m361"><div class="meta"><span class="t">14:28</span><span class="who">冠○</span></div><div class="body">謝謝~</div></div><div class="msg" id="m362"><div class="meta"><span class="t">14:30</span><span class="who">Y.</span></div><div class="body">英○剛剛註冊了</div></div><div class="msg lu" id="m363"><div class="meta"><span class="t">14:34</span><span class="who">呂紹鳴</span></div><div class="body">就是卡關才貼出來</div></div><div class="msg" id="m364"><div class="meta"><span class="t">14:44</span><span class="who">黃○○</span></div><div class="body">我的WhatsApp號碼是 （電話已移除）</div></div><div class="msg" id="m365"><div class="meta"><span class="t">14:44</span><span class="who">朴○○</span></div><div class="body">朴○○ （電話已移除） 謝謝您</div></div><div class="msg" id="m366"><div class="meta"><span class="t">15:00</span><span class="who">黃○○</span></div><div class="body">@呂紹鳴 Damon(奇足石爸) 雪○手機號碼是（電話已移除）
+
+感謝</div></div><div class="msg" id="m370"><div class="meta"><span class="t">15:21</span><span class="who">鄭○○</span></div><div class="body">鄭○○ （電話已移除） 謝謝！</div></div><div class="msg" id="m371"><div class="meta"><span class="t">15:28</span><span class="who">迦○</span></div><div class="body">康○○ （電話已移除） 剛剛註冊了，感謝</div></div><div class="msg" id="m372"><div class="meta"><span class="t">16:15</span><span class="who">立○</span></div><div class="body">剛註冊了，謝謝！</div></div><div class="msg" id="m373"><div class="meta"><span class="t">16:23</span><span class="who">鄭○○</span></div><div class="body">我剛發現我的WhatsApp帳號用以前韓國的電話號碼註冊過。
+（電話已移除） </div></div><div class="msg" id="m375"><div class="meta"><span class="t">17:21</span><span class="who">黃○○</span></div><div class="body">黃○○（電話已移除）
+剛剛註冊了
+謝謝～</div></div><div class="msg" id="m378"><div class="meta"><span class="t">17:32</span><span class="who">張○○</span></div><div class="body">心○剛剛已經註冊，謝謝🙏</div></div><div class="msg lu media" id="m379"><div class="meta"><span class="t">19:46</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu cited" id="m380"><div class="meta"><span class="t">19:48</span><span class="who">呂紹鳴</span></div><div class="body">短時間內新增太多成員，被封鎖了！倒數18小時50分……</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg lu media" id="m381"><div class="meta"><span class="t">19:48</span><span class="who">呂紹鳴</span></div><span class="mediatag">貼圖</span></div><div class="msg" id="m382"><div class="meta"><span class="t">19:50</span><span class="who">群○</span></div><div class="body">感謝紹鳴颱風天還幫大家處理事情！</div></div><div class="msg" id="m383"><div class="meta"><span class="t">19:51</span><span class="who">群○</span></div><div class="body">還是你可以把群組連結分享給大家？讓大家自己開好帳號之後點連結加入？</div></div><div class="msg" id="m384"><div class="meta"><span class="t">19:52</span><span class="who">慧○</span></div><div class="body">休息一下，明天後天再來</div></div><div class="msg lu cited" id="m385"><div class="meta"><span class="t">19:55</span><span class="who">呂紹鳴</span></div><div class="body">嗯，籌備同工沒有要開放這個方式耶！</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg lu" id="m386"><div class="meta"><span class="t">19:56</span><span class="who">呂紹鳴</span></div><div class="body">還好平常沒在用WhatsApp </div></div><div class="msg" id="m387"><div class="meta"><span class="t">19:56</span><span class="who">楊○○</span></div><div class="body">你都沒在放假......快去休息吧!</div></div><div class="msg" id="m388"><div class="meta"><span class="t">19:57</span><span class="who">楊○○</span></div><div class="body">真的很謝謝紹鳴</div></div><div class="msg lu" id="m389"><div class="meta"><span class="t">19:57</span><span class="who">呂紹鳴</span></div><div class="body">有啦！有睡午覺吃飽飽</div></div><div class="msg lu" id="m390"><div class="meta"><span class="t">20:09</span><span class="who">呂紹鳴</span></div><div class="body">昨天是新加坡同工被封鎖……，所以後來就沒有進度了~
+後來就請各國聯絡人，協助處理新增各國的同工，還好時間還很充裕，再被封鎖一次應該可以加完</div></div><div class="msg media" id="m392"><div class="meta"><span class="t">20:18</span><span class="who">陳信宏</span></div><span class="mediatag">貼圖</span></div></div><div class="day"><h4 class="daylabel">10/24（六）</h4><div class="msg cited" id="m394"><div class="meta"><span class="t">11:16</span><span class="who">陳信宏</span></div><div class="body">@All 大約兩週之後我們就要去曼谷參加ASF了，鼓勵同工們可利用空檔寫一封代禱信發給事奉夥伴，也邀請他們為你和ASF代禱。特別是如果你之前有為此行籌款的話，我建議你這麼做。你的ASF代禱信，可以結合你平常的事工一起發出去。</div><div class="back"><a href="#s-prayer">↩ 禱告與籌款</a></div></div><div class="msg cited" id="m395"><div class="meta"><span class="t">11:18</span><span class="who">陳信宏</span></div><div class="body">ASF有放禱告的資源和相關介紹，同工們可以使用</div><div class="back"><a href="#s-prayer">↩ 禱告與籌款</a></div></div><div class="msg cited" id="m396"><div class="meta"><span class="t">11:19</span><span class="who">陳信宏</span></div><div class="body">如果您此行的費用還有不足，可以把握機會籌款</div><div class="back"><a href="#s-prayer">↩ 禱告與籌款</a></div></div><div class="msg cited" id="m397"><div class="meta"><span class="t">11:19</span><span class="who">陳信宏</span></div><div class="body"><a href="https://sites.google.com/cru.org.sg/asf26/prayer?authuser=0" target="_blank" rel="noopener">https://sites.google.com/cru.org.sg/asf26/prayer?authuser=0</a></div><div class="back"><a href="#s-prayer">↩ 禱告與籌款</a></div></div><div class="msg media" id="m398"><div class="meta"><span class="t">11:20</span><span class="who">陳信宏</span></div><span class="mediatag">圖片</span></div><div class="msg" id="m399"><div class="meta"><span class="t">11:23</span><span class="who">陳信宏</span></div><div class="body"><a href="https://www.youtube.com/watch?v=0-jmaieYOcs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=0-jmaieYOcs</a></div></div><div class="msg cited" id="m400"><div class="meta"><span class="t">11:32</span><span class="who">陳信宏</span></div><div class="body">感謝同工們的配合和協助！因為WhatsApp的運作方式跟我們習慣使用LINE的方式不同，加上為了WhatsApp大會群組的安全(它不是公開的社群)，因此需要一筆一筆地加入</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg" id="m401"><div class="meta"><span class="t">11:44</span><span class="who">陳信宏</span></div><div class="body">願神記念同工們事奉的辛勞，供應每位同工和家庭的需要🙏 颱風連假中平安！</div></div><div class="msg lu cited" id="m402"><div class="meta"><span class="t">17:28</span><span class="who">呂紹鳴</span></div><div class="body">剛剛才加了11個人，又被封鎖了！</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg lu media" id="m403"><div class="meta"><span class="t">17:28</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu cited" id="m404"><div class="meta"><span class="t">17:29</span><span class="who">呂紹鳴</span></div><div class="body">每天加幾個，還沒加到的同工再等等，目前大會沒有公告資訊</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg sys" id="m405"><span class="t">19:59</span><span class="sysbody">惠○ 更新了相簿</span></div></div><div class="day"><h4 class="daylabel">10/25（日）</h4><div class="msg lu cited" id="m407"><div class="meta"><span class="t">11:49</span><span class="who">呂紹鳴</span></div><div class="body">有參加ASF的同工，電話已經全部加過一輪，以下：
+1.「有標帳號的同工」是還沒註冊WhatsApp，
+2.「標註@的同工還沒註冊也沒加入這個Line群」，我再另外通知
+
+如果同工之後有註冊、也要加入ASF官方社群接收官方公告，請再聯絡我，以便將您新增進入社群。
+
+未來的目標是會把官方公告，直接手機AI翻譯後，截圖轉貼過來。若有同工發現我遲遲未轉貼中文公告，麻煩協助轉貼，不要重複就好！
+
+（同工手機號碼名單，公開版已移除）</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg sys" id="m435"><span class="t">13:32</span><span class="sysbody">宜○ 成員加入群組</span></div><div class="msg" id="m436"><div class="meta"><span class="t">13:34</span><span class="who">宜○</span></div><div class="body">是不是可以把公告訊息也貼在記事本，看到上面有三項公告，但是都沒有訊息</div></div><div class="msg lu" id="m437"><div class="meta"><span class="t">13:35</span><span class="who">呂紹鳴</span></div><div class="body">目前ASF沒有公布任何通知</div></div><div class="msg sys" id="m438"><span class="t">13:37</span><span class="sysbody">呂紹鳴 設定了公告</span></div><div class="msg sys" id="m439"><span class="t">13:41</span><span class="sysbody">呂紹鳴 設定了公告</span></div><div class="msg cited" id="m440"><div class="meta"><span class="t">13:43</span><span class="who">周○○</span></div><div class="body">應該是指 LINE群組，後進的人看不到前面的信息，包含公告  
+
+前面信息是關於國外上網esim ，sim卡相關 ，還有whatsapp 群組邀請、 ASF注意事項（這項有加進相簿）</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg lu cited" id="m443"><div class="meta"><span class="t">13:46</span><span class="who">呂紹鳴</span></div><div class="body">前面的資料，放在公告、記事本、相簿</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg lu cited" id="m444"><div class="meta"><span class="t">13:47</span><span class="who">呂紹鳴</span></div><div class="body">@周○○ 
+後面加入看不到置頂的「公告」嗎？</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg sys" id="m446"><span class="t">13:47</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg" id="m447"><div class="meta"><span class="t">13:49</span><span class="who">周○○</span></div><div class="body">沒辦法，只可以看到公告的標籤 的前幾個字</div></div><div class="msg lu" id="m448"><div class="meta"><span class="t">13:49</span><span class="who">呂紹鳴</span></div><div class="body">我來放進記事本</div></div><div class="msg lu cited" id="m449"><div class="meta"><span class="t">13:59</span><span class="who">呂紹鳴</span></div><div class="body">避免淹沒在前面的資訊裡，再提一次，但大家身上的現金，因為入境的要求，應該是足夠：
+
+⏩⏩⏩有一個沒有報告過的資訊：‼️‼️‼️
+在曼谷入住飯店時，每一間房都會收押金，約4️⃣0️⃣0️⃣0️⃣泰銖（現金或信用卡預授權，金額依飯店規定）作為雜費與損壞押金。押金是依房間數量計算。
+例如：如果是雙人房就是4000元，跟先辦入住的那人收。
+如果家庭分兩間房，每一間都要4000元</div><div class="back"><a href="#s-money">↩ 換錢、押金與報帳</a></div></div><div class="msg sys" id="m455"><span class="t">14:01</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg sys" id="m456"><span class="t">14:44</span><span class="sysbody">瑞○ 更新了相簿</span></div><div class="msg sys" id="m457"><span class="t">16:01</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg lu" id="m458"><div class="meta"><span class="t">16:06</span><span class="who">呂紹鳴</span></div><div class="body">@瑞○ 是不是誤刪代禱卡？還是哪裡需要修改？</div></div><div class="msg" id="m459"><div class="meta"><span class="t">16:10</span><span class="who">瑞○</span></div><div class="body">是，你説對了，怎麼處理?</div></div><div class="msg lu" id="m460"><div class="meta"><span class="t">16:16</span><span class="who">呂紹鳴</span></div><div class="body">我來追加</div></div><div class="msg sys" id="m461"><span class="t">16:17</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg sys" id="m462"><span class="t">16:18</span><span class="sysbody">呂紹鳴 更新了相簿</span></div><div class="msg sys" id="m463"><span class="t">20:52</span><span class="sysbody">文○ 成員加入群組</span></div><div class="msg sys" id="m464"><span class="t">20:54</span><span class="sysbody">陳○○ 成員加入群組</span></div><div class="msg sys" id="m465"><span class="t">23:40</span><span class="sysbody">某位成員 成員加入群組</span></div></div><div class="day"><h4 class="daylabel">10/26（一）</h4><div class="msg lu" id="m467"><div class="meta"><span class="t">09:30</span><span class="who">呂紹鳴</span></div><div class="body">有人問是不是大家都加入Line群、WhatsApp社群了？
+還有同工未加入，原本有在Line群，已經標註通知，原本不在line群，已經個別通知。
+我只是依據能不能發出WhatsApp邀請？來寄出提醒訊息，但我邀請成功，同工也不一定有加入，我不會再次核對WhatsApp名單，因為不是強制加入。
+雙管齊下，大多數人都可以收到需知的資訊。</div></div><div class="msg" id="m471"><div class="meta"><span class="t">09:37</span><span class="who">蕎○</span></div><div class="body">真是費心了！謝謝紹鳴非常周到的服侍！🙏願上帝祝福滿滿！😇</div></div><div class="msg" id="m472"><div class="meta"><span class="t">12:12</span><span class="who">丁○○</span></div><div class="body">沒有看到邀請耶</div></div><div class="msg lu" id="m473"><div class="meta"><span class="t">15:55</span><span class="who">呂紹鳴</span></div><div class="body">測試一下</div></div><div class="msg lu media" id="m474"><div class="meta"><span class="t">15:55</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu cited" id="m475"><div class="meta"><span class="t">16:01</span><span class="who">呂紹鳴</span></div><div class="body">還有人在WhatsApp裡，沒有收到加入社群的邀請嗎？
+有的請喊一聲，我再發一次</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg lu cited" id="m477"><div class="meta"><span class="t">17:36</span><span class="who">呂紹鳴</span></div><div class="body">WhatsApp之前的邀請，若是沒有及時加入，會失效，需要重發的同工，請再聯絡我！</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg" id="m478"><div class="meta"><span class="t">17:42</span><span class="who">張○○</span></div><div class="body">我還沒有加入，請紹鳴哥幫忙🙏</div></div><div class="msg lu" id="m479"><div class="meta"><span class="t">18:13</span><span class="who">呂紹鳴</span></div><div class="body">已經加了，請過去看看</div></div><div class="msg" id="m480"><div class="meta"><span class="t">18:46</span><span class="who">金○○</span></div><div class="body">我的WhatsApp帳號
+（電話已移除）
+謝謝！</div></div><div class="msg lu" id="m483"><div class="meta"><span class="t">18:53</span><span class="who">呂紹鳴</span></div><div class="body">已經加了，請過去看看</div></div><div class="msg" id="m484"><div class="meta"><span class="t">19:06</span><span class="who">黃○○</span></div><div class="body">我沒收到</div></div><div class="msg" id="m485"><div class="meta"><span class="t">19:22</span><span class="who">鄭○○</span></div><div class="body">我再申請帳號用台灣的電話
+（電話已移除）</div></div><div class="msg" id="m487"><div class="meta"><span class="t">20:04</span><span class="who">宜○</span></div><div class="body">顯示邀請失敗，所以紹鳴再邀請我？</div></div><div class="msg lu" id="m488"><div class="meta"><span class="t">22:51</span><span class="who">呂紹鳴</span></div><div class="body">（電話已移除）尚未註冊WhatsApp </div></div><div class="msg lu" id="m489"><div class="meta"><span class="t">22:52</span><span class="who">呂紹鳴</span></div><div class="body">已經加了，請過去看看</div></div><div class="msg lu media" id="m490"><div class="meta"><span class="t">22:53</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu" id="m491"><div class="meta"><span class="t">22:54</span><span class="who">呂紹鳴</span></div><div class="body">宜○姊已經在裡面了</div></div></div><div class="day"><h4 class="daylabel">10/27（二）</h4><div class="msg" id="m493"><div class="meta"><span class="t">07:04</span><span class="who">黃○○</span></div><div class="body">我的是（電話已移除）
+感謝</div></div><div class="msg lu" id="m495"><div class="meta"><span class="t">07:05</span><span class="who">呂紹鳴</span></div><div class="body">已經加了，請過去看看</div></div><div class="msg" id="m496"><div class="meta"><span class="t">07:11</span><span class="who">黃○○</span></div><div class="body">感謝！</div></div><div class="msg sys" id="m497"><span class="t">09:18</span><span class="sysbody">某位成員 成員加入群組</span></div><div class="msg sys" id="m498"><span class="t">12:36</span><span class="sysbody">某位成員 成員加入群組</span></div></div><div class="day"><h4 class="daylabel">10/28（三）</h4><div class="msg lu cited" id="m500"><div class="meta"><span class="t">15:47</span><span class="who">呂紹鳴</span></div><div class="body">前72小時填寫泰國入境卡，完成線上填寫與健康，並保存好QR code
+2選1
+▶泰國官方數位入境卡 TDAC 網站
+<a href="https://tdac.immigration.go.th/arrival-card/#/home" target="_blank" rel="noopener">https://tdac.immigration.go.th/arrival-card/#/home</a>
+
+▶官方THIM App完成線上填寫與健康
+Apple Store 
+<a href="https://apps.apple.com/tw/app/thim-thai-immigration-bureau/id6759272559" target="_blank" rel="noopener">https://apps.apple.com/tw/app/thim-thai-immigration-bureau/id6759272559</a>
+Google Play
+<a href="https://play.google.com/store/apps/details?id=th.go.immigration.thim&amp;pcampaignid=web_share" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=th.go.immigration.thim&amp;pcampaignid=web_share</a>
+
+前48小時各航空公司網站預辦登機
+
+建議列印紙本資料
+1護照影本
+飯店資料
+2大會時間表
+（內部檔案連結公開版已移除，請看 LINE 群組）
+3回程班機資料
+4飯店資料
+5入境卡 QR code (每個人都有自己專屬的)
+
+建議國際線旅客於起飛前約 2～3 小時抵達
+
+1.到出境大廳先看航班電子看板
+2.找到報到櫃檯，(可用自助機)
+3.完成護照及旅行文件查驗
+4.領取登機證使用自助報到也要到櫃檯領紙本登機證，保留好去回雙程的登機證，日後報帳要用
+5.櫃台人工託運行李(桃機有自助託運行李機，不是每間航空都能用！)
+6.▶有付款線上換匯，
+  ▶記得到台銀櫃臺提領外幣◀
+   台銀線上換匯<a href="https://fctc.bot.com.tw/" target="_blank" rel="noopener">https://fctc.bot.com.tw/</a> 
+   線上換匯教學(紹鳴編製)
+    （內部檔案連結公開版已移除，請看 LINE 群組）
+
+7.檢查隨身行李，請注意違禁品清單
+8.通關(人工或自動通關 e-Gate)
+9.確認登機門、候機
+10.跑廁所、裝水、購物、飲食</div><div class="back"><a href="#s-passport">↩ 證件與入境</a><a href="#s-airport">↩ 機場出發流程</a><a href="#s-money">↩ 換錢、押金與報帳</a></div></div><div class="msg sys" id="m539"><span class="t">15:48</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg media" id="m540"><div class="meta"><span class="t">16:20</span><span class="who">賴○○</span></div><span class="mediatag">貼圖</span></div><div class="msg sys" id="m541"><span class="t">17:42</span><span class="sysbody">某位成員 成員加入群組</span></div></div><div class="day"><h4 class="daylabel">10/29（四）</h4><div class="msg sys" id="m543"><span class="t">11:31</span><span class="sysbody">慧○ 更新了記事本</span></div><div class="msg sys" id="m544"><span class="t">15:19</span><span class="sysbody">明○ 收回了一則訊息</span></div><div class="msg cited" id="m545"><div class="meta"><span class="t">15:20</span><span class="who">明○</span></div><div class="body">危機小組關心您。
+以下是簡易版危機處理SOP。</div><div class="back"><a href="#s-safety">↩ 禮儀與安全</a></div></div><div class="msg media" id="m547"><div class="meta"><span class="t">15:20</span><span class="who">明○</span></div><span class="mediatag">圖片</span></div><div class="msg media" id="m548"><div class="meta"><span class="t">15:20</span><span class="who">明○</span></div><span class="mediatag">圖片</span></div><div class="msg media" id="m549"><div class="meta"><span class="t">15:20</span><span class="who">明○</span></div><span class="mediatag">圖片</span></div><div class="msg sys" id="m550"><span class="t">15:20</span><span class="sysbody">明○ 更新了記事本</span></div><div class="msg sys" id="m551"><span class="t">15:45</span><span class="sysbody">文○ 成員加入群組</span></div><div class="msg lu" id="m552"><div class="meta"><span class="t">16:43</span><span class="who">呂紹鳴</span></div><div class="body">還有人要加入ASF的WhatsApp 群組嗎？
+大會籌備同工即將開始放送公告</div></div></div><div class="day"><h4 class="daylabel">10/30（五）</h4><div class="msg" id="m555"><div class="meta"><span class="t">15:35</span><span class="who">柯○○</span></div><div class="body">碧○
+（電話已移除）</div></div><div class="msg lu media" id="m557"><div class="meta"><span class="t">19:25</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div><div class="msg lu" id="m558"><div class="meta"><span class="t">19:25</span><span class="who">呂紹鳴</span></div><div class="body">已經在群組內了！</div></div><div class="msg" id="m559"><div class="meta"><span class="t">19:39</span><span class="who">金○○</span></div><div class="body">@呂紹鳴 Damon(奇足石爸) 
+請幫我進入Whats
+（電話已移除）
+謝謝！</div></div><div class="msg" id="m563"><div class="meta"><span class="t">19:39</span><span class="who">楊○○</span></div><div class="body">@呂紹鳴 Damon(奇足石爸) 紹鳴，打擾了，有事情找你。方便接電話嗎？</div></div></div><div class="day"><h4 class="daylabel">10/31（六）</h4><div class="msg cited" id="m565"><div class="meta"><span class="t">18:02</span><span class="who">陳信宏</span></div><div class="body">曼谷捷運地圖 <a href="https://www.bangkoktransitmap.com/" target="_blank" rel="noopener">https://www.bangkoktransitmap.com/</a></div><div class="back"><a href="#s-transit">↩ 曼谷交通</a></div></div><div class="msg sys" id="m566"><span class="t">18:49</span><span class="sysbody">呂紹鳴 更新了記事本</span></div></div><div class="day"><h4 class="daylabel">11/1（日）</h4><div class="msg" id="m568"><div class="meta"><span class="t">13:16</span><span class="who">陳○○</span></div><div class="body">@呂紹鳴 Damon(奇足石爸) 
+請幫我進入Whats
+（電話已移除）
+謝謝！</div></div><div class="msg lu cited" id="m572"><div class="meta"><span class="t">13:52</span><span class="who">呂紹鳴</span></div><div class="body">您要用這支電話先申請WhatsApp的帳號</div><div class="back"><a href="#s-whatsapp">↩ WhatsApp 官方公告群組</a></div></div><div class="msg lu media" id="m573"><div class="meta"><span class="t">13:52</span><span class="who">呂紹鳴</span></div><span class="mediatag">圖片</span></div></div><div class="day"><h4 class="daylabel">11/2（一）</h4><div class="msg sys" id="m575"><span class="t">07:53</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg lu cited" id="m576"><div class="meta"><span class="t">07:53</span><span class="who">呂紹鳴</span></div><div class="body">同工們：平安！
+在ASF報名時，若您有認領代禱者的服事，我們已開始推動會前每天的守望禱告，邀請您用以下連結加入我們的代禱者群組。
+ （邀請連結公開版已移除，請看 LINE 群組）
+此外，大會期間，代禱者每早晨也會於會場進行行走禱告。
+若您不確定是否有認領大會代禱者的服事，我們也仍然歡迎您用上述連結加入我們的代禱守望行列。
+
+ASF禱告組 敬上</div><div class="back"><a href="#s-prayer">↩ 禱告與籌款</a></div></div><div class="msg lu cited" id="m583"><div class="meta"><span class="t">23:45</span><span class="who">呂紹鳴</span></div><div class="body">@All 提醒一下，入境申請是免費的喔！
+任何要收費的網站代辦-&gt;👉👉👉都不要點</div><div class="back"><a href="#s-passport">↩ 證件與入境</a></div></div></div><div class="day"><h4 class="daylabel">11/3（二）</h4><div class="msg lu cited" id="m586"><div class="meta"><span class="t">12:18</span><span class="who">呂紹鳴</span></div><div class="body">昨天ASF大會寄出的行前通知要點：
+
+1.核對資料
+2.先入住飯店再報到(另一封信)
+3.TDAC入境申請
+4.預先規劃當地交通
+5.Wordly AI翻譯應用程式
+
+
+1.請同工再次核對班機、住宿資料、聯絡資訊。
+   (請注意一下，大會的信裡的班機時間是到曼谷、跟離開曼谷的時間喔！不是台灣出發起飛的時間，請大家再次確認電子機票上的飛機航班時間。有同工誤以為信里是桃園起飛時間、有幾位同工的離開時間是明顯錯誤的）
+
+2.前72小時填寫泰國入境卡，完成線上填寫與健康，並保存好QR code
+2選1填寫入境申請
+▶泰國官方數位入境卡 TDAC 網站
+<a href="https://tdac.immigration.go.th/arrival-card/#/home" target="_blank" rel="noopener">https://tdac.immigration.go.th/arrival-card/#/home</a>
+或是▶官方THIM App
+
+前48小時各航空公司網站預辦登機
+
+
+3.ASF同工非常用心製作了很多交通指引建議的檔案，請依照您的行程參考。
+<a href="https://sites.google.com/cru.org.sg/asf26/venue?mc_cid=ed06183b91&amp;mc_eid=236610b3e8#h.cst6lf35qbdq" target="_blank" rel="noopener">https://sites.google.com/cru.org.sg/asf26/venue?mc_cid=ed06183b91&amp;mc_eid=236610b3e8#h.cst6lf35qbdq</a>
+
+a.離台灣同工住的飯店最近的捷運是Airport Rail Link, ARL線 A7站👈👈👈
+b.如果是叫車，請同務必走高速公路(要負擔過路費)，需要在車上付現車資，請準備 100元面額的紙鈔 ‼️‼️‼️
+最好的方案是👉👉在台灣先預訂好接機車輛，台灣的旅遊網站有發票。
+
+4.Wordly 應用程式
+大會有提供即時翻譯。請下載應用，不用註冊帳號，攜帶耳機(有限、無線都可，但不要用飛機上的)、行動電源，並確保您有足夠的網路。
+iOS
+<a href="https://apps.apple.com/sg/app/wordly-translation/id1507412881" target="_blank" rel="noopener">https://apps.apple.com/sg/app/wordly-translation/id1507412881</a>
+Android 
+<a href="https://play.google.com/store/apps/details?id=tech.wordly.android.present&amp;pcampaignid=web_share" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=tech.wordly.android.present&amp;pcampaignid=web_share</a>
+
+5.請先查看研討會資訊，可以先決定要參加哪一場？
+“From Conversations to Journeys: Turning Everyday Digital Moments into Gospel Pathways” 這場要自備筆電或平板及網路
+<a href="https://sites.google.com/cru.org.sg/asf26/seminars?mc_cid=ed06183b91&amp;mc_eid=236610b3e8" target="_blank" rel="noopener">https://sites.google.com/cru.org.sg/asf26/seminars?mc_cid=ed06183b91&amp;mc_eid=236610b3e8</a>
+有時間處理的話，我會再翻譯更新後的圖卡
+
+6.ASF官方談的網路方案，主要只針對翻譯需求，Wordly應用程式最低要求6/6 Mbps的網速。
+我自己是另外在KKDAY購買網路，比較便宜且速度及流量都比較多。</div><div class="back"><a href="#s-passport">↩ 證件與入境</a><a href="#s-check">↩ 大會通知信與資料核對</a><a href="#s-airport">↩ 機場出發流程</a><a href="#s-money">↩ 換錢、押金與報帳</a><a href="#s-net">↩ 上網：漫遊、eSIM、實體 SIM 卡</a><a href="#s-transit">↩ 曼谷交通</a><a href="#s-session">↩ 大會期間：翻譯與研討會</a></div></div><div class="msg sys" id="m628"><span class="t">12:19</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg lu cited" id="m629"><div class="meta"><span class="t">12:34</span><span class="who">呂紹鳴</span></div><div class="body">今天早上寄出的ASF報到通知
+
+1.每個人都有一個專屬的QR code，小孩也是。每個人都有一封信件。
+2.報到步驟
+    A.抵達會場：
+請前往曼谷盛泰瀾酒店會議中心22樓（ 泰國曼谷巴吞旺區拉瑪一世路 999/99 號，郵編 10330 ）
+the 22nd floor of Bangkok Convention Centre at the Centara Grand (999/99 Rama 1 Road, Pathumwan, Bangkok 10330, Thailand) 
+
+報到開放時間： 11月9日，下午1點至晚上9點30分
+
+    B.把信裡的QR code，以手機畫面（或列印紙本）出示給註冊團隊掃描
+
+    C.領取名牌：
+4歲以下兒童：托兒所將發放姓名標籤。 👈11/10
+4 至 18 歲兒童：從「其他及 4-18 歲兒童」收集姓名標籤。👈👈👈跟全禱日時報告的不一樣‼️‼️‼️
+19歲以上兒童：與父母一起領取姓名標籤。
+
+請注意特殊顏色的名牌掛繩，是有安全需求的人，拍照請避開。</div><div class="back"><a href="#s-checkin">↩ 飯店入住與大會報到</a></div></div><div class="msg sys" id="m648"><span class="t">12:34</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg" id="m649"><div class="meta"><span class="t">12:34</span><span class="who">黃○○</span></div><div class="body">請問ASF大會裡面會有一些類似工作坊的課程，需要先選課嗎？</div></div><div class="msg lu cited" id="m650"><div class="meta"><span class="t">12:35</span><span class="who">呂紹鳴</span></div><div class="body">不用先登記，現場直接進去就好</div><div class="back"><a href="#s-session">↩ 大會期間：翻譯與研討會</a></div></div><div class="msg lu cited" id="m651"><div class="meta"><span class="t">12:36</span><span class="who">呂紹鳴</span></div><div class="body"><a href="https://sites.google.com/cru.org.sg/asf26/seminars?mc_cid=ed06183b91&amp;mc_eid=236610b3e8" target="_blank" rel="noopener">https://sites.google.com/cru.org.sg/asf26/seminars?mc_cid=ed06183b91&amp;mc_eid=236610b3e8</a>
+可以先想想</div><div class="back"><a href="#s-session">↩ 大會期間：翻譯與研討會</a></div></div><div class="msg lu cited" id="m653"><div class="meta"><span class="t">13:11</span><span class="who">呂紹鳴</span></div><div class="body">關於會場早晨入口
+因為大會時間表定是09:00開始，場地大家都不熟悉，建議大家至少提早 20分鐘抵達，因為會場建物很大，會場在22樓、1800人參與連搭電梯都要等很久。
+
+ASF大會通知還未提到：
+會場樓下的購物中心早上10點才營業，大馬路邊的商場入口是還沒開啟的。
+
+‼️‼️強烈建議同工：在11/9報到時，先嘗試走看看購物中心後方的會議中心的正門，避免11/10早上迷路。👈👈👈</div><div class="back"><a href="#s-checkin">↩ 飯店入住與大會報到</a></div></div><div class="msg sys" id="m663"><span class="t">13:12</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg sys" id="m664"><span class="t">14:27</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m665"><span class="t">14:27</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m666"><span class="t">14:27</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m667"><span class="t">14:27</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m668"><span class="t">14:28</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m669"><span class="t">14:53</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m670"><span class="t">15:01</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m671"><span class="t">15:01</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg lu cited" id="m672"><div class="meta"><span class="t">15:09</span><span class="who">呂紹鳴</span></div><div class="body">同工報帳要記得收集單據
+1.紙本登機證、行程表
+2.兩地交通收據，叫車APP、網路訂購接機車、捷運要到人工櫃台買票再請他印
+3.餐飲收據
+4.買禮物收據</div><div class="back"><a href="#s-money">↩ 換錢、押金與報帳</a></div></div><div class="msg sys" id="m677"><span class="t">15:17</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg sys" id="m678"><span class="t">15:19</span><span class="sysbody">呂紹鳴 收回了一則訊息</span></div><div class="msg" id="m679"><div class="meta"><span class="t">15:19</span><span class="who">蘇○○</span></div><div class="body">已經下載APP</div></div><div class="msg lu cited" id="m680"><div class="meta"><span class="t">15:20</span><span class="who">呂紹鳴</span></div><div class="body">Thim APP網路教學，網友說通關比較快...
+泰國入境Thim App已經可以建立資料，但還是要等到[抵達前72小時]才能處理健康申報
+<a href="https://bkk.com.tw/thailand-immigration-management-system/" target="_blank" rel="noopener">https://bkk.com.tw/thailand-immigration-management-system/</a></div><div class="back"><a href="#s-passport">↩ 證件與入境</a></div></div><div class="msg sys" id="m683"><span class="t">15:20</span><span class="sysbody">呂紹鳴 更新了記事本</span></div><div class="msg sys" id="m684"><span class="t">15:23</span><span class="sysbody">蘇○○ 收回了一則訊息</span></div><div class="msg" id="m685"><div class="meta"><span class="t">15:25</span><span class="who">蘇○○</span></div><div class="body">要以遊客身分，直接進入。 </div></div><div class="msg lu cited" id="m686"><div class="meta"><span class="t">15:26</span><span class="who">呂紹鳴</span></div><div class="body">我這個排版會讓人誤會
+4歲以下是11/10幼兒照顧時發名牌
+
+其餘的人都是11/9 13:00~21:30 在22樓會場報到</div><div class="back"><a href="#s-checkin">↩ 飯店入住與大會報到</a></div></div><div class="msg" id="m690"><div class="meta"><span class="t">15:45</span><span class="who">宜○</span></div><div class="body">先入住飯店再報到？！是嗎？</div></div><div class="msg lu cited" id="m691"><div class="meta"><span class="t">15:47</span><span class="who">呂紹鳴</span></div><div class="body">1.最推薦這樣安排，不用大包小包的走去會場，也熟悉第二天一早的路線
+2.如果還不能入注，就先把行李寄放飯店櫃台</div><div class="back"><a href="#s-checkin">↩ 飯店入住與大會報到</a></div></div></div>
+    </section>
+  </main>
+</div>
+<script>
+(function () {
+  var log = document.getElementById('log');
+  var map = { 'f-lu': 'only-lu', 'f-cited': 'only-cited', 'f-media': 'hide-media', 'f-sys': 'hide-sys' };
+  function apply() {
+    Object.keys(map).forEach(function (id) { log.classList.toggle(map[id], document.getElementById(id).checked); });
+  }
+  Object.keys(map).forEach(function (id) { document.getElementById(id).addEventListener('change', apply); });
+  apply();
+  document.querySelector('.totop').addEventListener('click', function (e) { e.preventDefault(); window.scrollTo(0, 0); });
+  // 點整理裡的原文標籤：先把篩選關掉，確保那一則看得到，再捲過去並閃一下
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a.ref[data-target]');
+    if (!a) return;
+    var el = document.getElementById(a.dataset.target);
+    if (!el) return;
+    if (el.offsetParent === null) {
+      ['f-lu', 'f-cited', 'f-media', 'f-sys'].forEach(function (id) { document.getElementById(id).checked = false; });
+      apply();
+    }
+    document.querySelectorAll('.msg.flash').forEach(function (m) { m.classList.remove('flash'); });
+    el.classList.add('flash');
+    setTimeout(function () { el.classList.remove('flash'); }, 2600);
+  });
+})();
+</script>
