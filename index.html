@@ -75,6 +75,9 @@ nav.toc a.log { margin-top: 10px; border-top: 1px solid var(--line); border-radi
 
 main { min-width: 0; display: grid; gap: 88px; }
 main > section, nav.toc, .controls { min-width: 0; }
+.about { grid-column: 2; display: grid; gap: 10px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; }
+.about .lede { font-size: 14px; }
+@media (max-width: 860px) { .about { grid-column: 1; } }
 h2 { font-family: var(--f-display); font-size: 28px; margin: 0 0 4px; }
 .sub { margin: 0 0 20px; color: var(--muted); font-size: 14px; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: var(--muted); align-items: center; }
@@ -139,11 +142,10 @@ h2 { font-family: var(--f-display); font-size: 28px; margin: 0 0 4px; }
   .facts { gap: 4px 14px; font-size: 13px; }
 
   /* 目錄：橫向滑動的一排標籤，不再佔好幾行 */
-  nav.toc { flex-wrap: nowrap; overflow-x: auto; gap: 6px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding: 2px max(16px, env(safe-area-inset-left, 0px)) 8px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-  nav.toc::-webkit-scrollbar { display: none; }
-  nav.toc .h { display: none; }
-  nav.toc a, nav.toc a.log { flex: none; white-space: nowrap; padding: 6px 12px; border-radius: 999px; font-size: 14px; }
-  nav.toc a span { margin-left: 4px; }
+  nav.toc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  nav.toc .h { display: block; grid-column: 1 / -1; margin-bottom: 2px; }
+  nav.toc a, nav.toc a.log { display: flex; justify-content: space-between; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 8px; font-size: 14px; line-height: 1.35; }
+  nav.toc a.log { grid-column: 1 / -1; justify-content: center; }
 
   main { gap: 64px; }
   h2 { font-size: 24px; }
@@ -181,13 +183,6 @@ h2 { font-family: var(--f-display); font-size: 28px; margin: 0 0 4px; }
   <header class="top">
     <div class="eyebrow">LINE · ASF26 聯絡群組 · 2026/10/6 – 11/3</div>
     <h1>ASF26 曼谷行前須知</h1>
-    <p class="lede">從「ASF26 聯絡群組」整理出去泰國參加大會要注意的事。每一點後面的小標籤都能點，會跳到下方完整原始對話的那一則；原始對話也有連結可以跳回整理。</p>
-    <div class="facts">
-      <span>整理重點 <b>60</b> 點</span>
-      <span>原始訊息 <b>198</b> 則</span>
-      <span>其中呂紹鳴 <b>99</b> 則</span>
-      <span>匯出時間 <b>2026/11/3</b></span>
-    </div>
   </header>
 
   <nav class="toc" id="toc" aria-label="目錄">
@@ -549,6 +544,15 @@ ASF大會通知還未提到：
 2.如果還不能入注，就先把行李寄放飯店櫃台<span class="t">15:47</span></div><div class="back"><a href="#s-checkin">↩ 飯店入住與大會報到</a></div></div><div class="msg cited" id="m693"><div class="meta"><span class="who">賴○○</span></div><div class="body">用了thim app 很好用<span class="t">16:35</span></div><div class="back"><a href="#s-passport">↩ 證件與入境</a></div></div><div class="msg media" id="m694"><div class="meta"><span class="who">賴○○</span></div><div class="body"><span class="mediatag">貼圖</span><span class="t">16:38</span></div></div></div>
     </section>
   </main>
+  <footer class="about">
+    <p class="lede">從「ASF26 聯絡群組」整理出去泰國參加大會要注意的事。每一點後面的小標籤都能點，會跳到完整原始對話的那一則；原始對話也有連結可以跳回整理。</p>
+    <div class="facts">
+      <span>整理重點 <b>60</b> 點</span>
+      <span>原始訊息 <b>198</b> 則</span>
+      <span>其中呂紹鳴 <b>99</b> 則</span>
+      <span>匯出時間 <b>2026/11/3</b></span>
+    </div>
+  </footer>
 </div>
 <a class="fab" href="#toc" aria-label="回到目錄">目錄</a>
 <script>
