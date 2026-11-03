@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>ASF26 曼谷行前須知</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -37,7 +42,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 24px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
+body { margin: 0;
   background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.75;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
@@ -120,7 +125,56 @@ h2 { font-family: var(--f-display); font-size: 28px; margin: 0 0 4px; }
 #log.only-lu .msg:not(.lu) { display: none; }
 #log.only-cited .msg:not(.cited) { display: none; }
 .totop { font-size: 13px; }
+
+/* 手機版：同一個網頁，螢幕窄時自動切換 */
+.fab { display: none; }
+@media (max-width: 600px) {
+  body { font-size: 16px; line-height: 1.8; }
+  .wrap { padding-block: 20px 96px; gap: 20px; }
+  header.top { gap: 10px; }
+  .eyebrow { font-size: 11px; letter-spacing: .06em; }
+  h1 { font-size: 30px; }
+  .lede { font-size: 15px; }
+  .facts { gap: 4px 14px; font-size: 13px; }
+
+  /* 目錄：橫向滑動的一排標籤，不再佔好幾行 */
+  nav.toc { flex-wrap: nowrap; overflow-x: auto; gap: 6px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding: 2px max(16px, env(safe-area-inset-left, 0px)) 8px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  nav.toc::-webkit-scrollbar { display: none; }
+  nav.toc .h { display: none; }
+  nav.toc a, nav.toc a.log { flex: none; white-space: nowrap; padding: 6px 12px; border-radius: 999px; font-size: 14px; }
+  nav.toc a span { margin-left: 4px; }
+
+  main { gap: 64px; }
+  h2 { font-size: 24px; }
+  .legend { font-size: 12px; }
+  .topic { margin-top: 44px; }
+  .topic h3 { font-size: 20px; }
+  .pt { padding: 16px 0; }
+  .pt p { font-size: 16px; }
+  .refs { margin-top: 8px; }
+  .ref { font-size: 10px; padding: 2px 6px; }
+  .ref + .ref { margin-left: 6px; }
+  .badge { font-size: 11px; }
+  .note { padding: 12px 14px; }
+
+  /* 原始對話：篩選鈕變成可橫滑的一排開關，訊息全寬 */
+  .controls { flex-wrap: nowrap; overflow-x: auto; gap: 8px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding: 8px max(16px, env(safe-area-inset-left, 0px)); scrollbar-width: none; font-size: 13px; }
+  .controls::-webkit-scrollbar { display: none; }
+  .controls label { flex: none; white-space: nowrap; padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+  .controls .totop { display: none; }
+  .msg, .msg.sys { grid-template-columns: minmax(0, 1fr); padding: 10px 12px; gap: 2px; }
+  .msg .body, .msg .back { grid-column: 1; }
+  .msg .body { font-size: 15.5px; }
+  .msg.sys { padding: 3px 12px; }
+  .msg { scroll-margin-top: 70px; }
+  .msg .back { margin-top: 4px; }
+
+  /* 右下角的回目錄按鈕 */
+  .fab { display: grid; place-items: center; position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: 48px; height: 48px; border-radius: 50%; background: var(--ink); color: var(--bg); font-size: 13px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(0, 0, 0, .25); z-index: 20; }
+}
 </style>
+</head>
+<body>
 
 <div class="wrap">
   <header class="top">
@@ -135,7 +189,7 @@ h2 { font-family: var(--f-display); font-size: 28px; margin: 0 0 4px; }
     </div>
   </header>
 
-  <nav class="toc" aria-label="目錄">
+  <nav class="toc" id="toc" aria-label="目錄">
     <div class="h">目錄</div>
     <a href="#s-passport">證件與入境<span>6</span></a><a href="#s-check">大會通知信與資料核對<span>5</span></a><a href="#s-whatsapp">WhatsApp 官方公告群組<span>7</span></a><a href="#s-airport">機場出發流程<span>4</span></a><a href="#s-money">換錢、押金與報帳<span>5</span></a><a href="#s-net">上網：漫遊、eSIM、實體 SIM 卡<span>13</span></a><a href="#s-gear">電器與手機帳號<span>2</span></a><a href="#s-transit">曼谷交通<span>3</span></a><a href="#s-checkin">飯店入住與大會報到<span>6</span></a><a href="#s-session">大會期間：翻譯與研討會<span>2</span></a><a href="#s-kids">兒童<span>2</span></a><a href="#s-safety">禮儀與安全<span>2</span></a><a href="#s-prayer">禱告與籌款<span>3</span></a>
     <a class="log" href="#log">完整原始對話</a>
@@ -495,6 +549,7 @@ ASF大會通知還未提到：
     </section>
   </main>
 </div>
+<a class="fab" href="#toc" aria-label="回到目錄">目錄</a>
 <script>
 (function () {
   var log = document.getElementById('log');
@@ -521,3 +576,6 @@ ASF大會通知還未提到：
   });
 })();
 </script>
+
+</body>
+</html>
