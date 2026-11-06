@@ -225,6 +225,9 @@ mark { background: var(--hl); color: inherit; border-radius: 2px; padding: 0 1px
 .sched .ev.k-break .tt { font-weight: 400; }
 .sched-notes { list-style: none; margin: 12px 0 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); display: grid; gap: 6px; font-size: 14px; line-height: 1.65; }
 .sched-notes b { color: var(--accent); margin-right: 8px; }
+.sched-top { margin: 16px 0 0; text-align: right; }
+.sched-top .totop { display: inline-block; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--accent); font-size: 14px; font-weight: 500; text-decoration: none; }
+.sched-top .totop:hover { background: var(--accent-soft); }
 /* 窄螢幕：表格固定 620px 寬，再用 zoom 縮到剛好放得下（zoom 由下面的程式算）；程式沒跑時改成左右捲動 */
 @container (max-width: 619px) {
   .sched-tip { display: block; }
@@ -1422,6 +1425,7 @@ ASF聯絡人：呂紹鳴</p></details><div class="back"><a href="#s-security">�
       <h2>時間表</h2>
       <p class="sub">11/10（二）到 11/12（四）的聚會，都是<b>曼谷時間</b>（比台灣慢 1 小時）。11/9 報到和 11/13 退房寫在表格下面。內容和官網一致，有變動以官網為準。<a class="ref web" href="https://sites.google.com/cru.org.sg/asf26/schedule" target="_blank" rel="noopener">官網 時間表</a></p>
       <div class="sched-box"><p class="sched-tip">點表格可以放大。</p><div class="sched-wrap"><table class="sched"><colgroup><col class="c-label"><col><col><col></colgroup><thead><tr><th scope="col" class="corner">時段</th><th scope="col">11/10（二）Abide</th><th scope="col">11/11（三）Align</th><th scope="col">11/12（四）Advance</th></tr></thead><tbody><tr class="r-meal"><th scope="row"><span class="rl">早餐</span></th><td class="span" colspan="3"><div class="ev k-meal"><span class="tm">06:00–08:30</span><span class="tt">早餐（飯店）🍳</span></div></td></tr><tr class="r-worship"><th scope="row"><span class="rl">敬拜</span></th><td class="span" colspan="3"><div class="ev k-plain"><span class="tm">09:00–09:30</span><span class="tt">讚美與禱告 🙌</span></div></td></tr><tr class="r-keynote"><th scope="row"><span class="rl">主題信息</span></th><td><div class="ev k-main"><span class="tm">09:30–12:00<span class="tn">（10:15–10:45 休息）</span></span><span class="tt">Abide in Christ</span><span class="sp">講員：David Robbins</span></div></td><td><div class="ev k-main"><span class="tm">09:30–12:00<span class="tn">（10:15–10:45 休息）</span></span><span class="tt">Align with God&#x27;s Mission</span><span class="sp">講員：Kok Hiang &amp; Sharon Lam</span></div></td><td><div class="ev k-main"><span class="tm">09:30–12:00<span class="tn">（10:15–10:45 休息）</span></span><span class="tt">Advance for God&#x27;s Kingdom</span><span class="sp">講員：Rev. Timothy Lam（中文）、Uuganbaatar Chuluunbaatar</span><span class="sp">信息：Dr. Park Sung-Min</span></div></td></tr><tr class="r-meal"><th scope="row"><span class="rl">午餐</span></th><td class="span" colspan="3"><div class="ev k-meal"><span class="tm">12:00–14:00</span><span class="tt">午餐自理 🍔</span></div></td></tr><tr class="r-afternoon"><th scope="row"><span class="rl">下午</span></th><td><div class="ev k-main"><span class="tm">14:00–15:15</span><span class="tt">Seminar 時段 1</span></div><div class="ev k-break"><span class="tm">15:15–15:45</span><span class="tt">休息</span></div><div class="ev k-main"><span class="tm">15:45–17:00</span><span class="tt">Seminar 時段 2</span></div></td><td><div class="ev k-main"><span class="tm">14:00–15:15</span><span class="tt">Seminar 時段 3</span></div><div class="ev k-break"><span class="tm">15:15–15:45</span><span class="tt">休息</span></div><div class="ev k-main"><span class="tm">15:45–17:00</span><span class="tt">各地區時間</span></div></td><td><div class="ev k-main"><span class="tm">14:00–16:00</span><span class="tt">團隊時間 💡</span></div><div class="ev k-break"><span class="tm">16:00–16:15</span><span class="tt">休息</span></div><div class="ev k-main"><span class="tm">16:15–18:00</span><span class="tt">敬拜與禱告差派禮</span><span class="sp">講員：Prof. Delanyo Adadevoh</span></div></td></tr><tr class="r-meal"><th scope="row"><span class="rl">晚餐</span></th><td><div class="ev k-main"><span class="tm">17:00–20:00</span><span class="tt">大會慶祝晚宴</span><span class="sp">大會提供</span></div></td><td><div class="ev k-meal"><span class="tm">17:00–19:00</span><span class="tt">自由晚餐 🍴</span></div></td><td><div class="ev k-meal"><span class="tm">18:00–20:30</span><span class="tt">自由晚餐 🍴</span></div></td></tr><tr class="r-evening"><th scope="row"><span class="rl">晚上</span></th><td><div class="ev k-plain"><span class="tm">20:00–22:00</span><span class="tt">咖啡屋／單身派對 ☕</span></div></td><td><div class="ev k-plain"><span class="tm">19:00–22:00</span><span class="tt">咖啡屋 ☕</span></div></td><td><div class="ev k-plain"><span class="tm">18:00–20:30</span><span class="tt">咖啡屋 ☕</span></div></td></tr></tbody></table></div><ul class="sched-notes"><li><b>11/9（一）報到、入住</b>13:00–21:30 在會議中心 22 樓現場報到。飯店 15:00 起可以入住，建議先入住再去報到。晚上 9:30 以後才到的人，11/10 早上 7:30 起到主會議廳前的服務台報到。</li><li><b>11/13（五）退房</b>12:00 前退房。</li></ul></div>
+      <p class="sched-top"><a class="totop" href="#top">回到最上面 ↑</a></p>
     </section>
   </main>
   <footer class="about">
@@ -1513,7 +1517,9 @@ ASF聯絡人：呂紹鳴</p></details><div class="back"><a href="#s-security">�
     var h = a.getAttribute('href');
     if (h === '#docs') showTab('docs'); else if (h === '#log') showTab('log');
   });
-  document.querySelector('.totop').addEventListener('click', function (e) { e.preventDefault(); window.scrollTo(0, 0); });
+  document.querySelectorAll('.totop').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo(0, 0); });
+  });
   // 點整理裡的原文標籤：先把篩選關掉，確保那一則看得到，再捲過去並閃一下
   var panes = document.querySelector('.panes');
   function showTab(name) {
